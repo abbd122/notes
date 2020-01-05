@@ -557,5 +557,123 @@ print(a)  # 报错
 
 > 对于`io`来说，多线程和多进程性能差别不大
 
-`11-2`
+### `pycharm`在`debug`中查看线程
+
+![](/home/wangzheng/文档/notes/image/debug查看线程.png)
+
+### `setDaemon`: 主线程退出，子线程kill掉
+
+![](/home/wangzheng/文档/notes/image/setDaemon.png)
+
+### `join`: 等待子线程执行完成，主线程才会继续往下执行
+
+![](/home/wangzheng/文档/notes/image/join.png)
+
+> 在此期间，线程是并行运行的，并不是顺序运行的
+
+### `Thread`通过继承来简化代码
+
+![](/home/wangzheng/文档/notes/image/Thread.png)
+
+## 线程间通信
+
+### `queue`进行线程间同步
+
+> 1. `queue`是线程安全的，因为内部实现使用双端队列`deque`，而`deque`本身是线程安全的
+> 2. 线程间通信用`queue`来代替`list`或`set`
+
+![](/home/wangzheng/文档/notes/image/queue.png)
+
+- 其他常用方法: 
+
+1. `qsize`: 获得队列的长度
+
+2. `empty`: 队列是否为空
+3. `full`: 队列是否已满
+4. `get`, `put`: 获取、存储数据，默认`block=True`阻塞，会等待获取(或存储)结束才执行下一步
+5. `put_nowait`, `get_nowait`: 操作时不等待，异步执行
+6. `join`, `task_done`: 队列阻塞，知道接收到`task_done`指令才退出
+
+![](/home/wangzheng/文档/notes/image/join&task_done.png)
+
+## 线程同步
+
+### `threading.Lock`
+
+![](/home/wangzheng/文档/notes/image/threading.Lock.png)
+
+### `threading.RLock`
+
+> 可重入的锁
+>
+> - 在同一个线程里面，可以连续调用多次`aquire`，一定注意`aquire`和`release`的次数要相等
+
+![](/home/wangzheng/文档/notes/image/threading.RLock.png)
+
+### `threading.Condition`
+
+> 条件变量，用于复杂的线程间同步
+
+#### `wait` & `notify`
+
+> `condition`有两层锁，一把底层锁会在线程调用了`wait`方法的时候释放，上面的锁会在每次调用`wait`的时候分配一把并放入到`condition`的等待队列中，等待`nodify`方法的唤醒
+
+![](/home/wangzheng/文档/notes/image/threading.Condition.png)
+
+![](/home/wangzheng/文档/notes/image/wait&notify.png)
+
+### `threading.Semaphore`
+
+> 信号量，用于控制进入数量的锁
+
+![](/home/wangzheng/文档/notes/image/threading.Semaphore.png)
+
+## `concurrent.futures`线程池
+
+> 1. 兼顾Semaphore(控制执行数量)的功能和自动执行`start`功能
+> 2. 主线程中可以获取某一个线程的状态或某一个任务的状态，以及返回值
+> 3. 可以让多线程和多进程编码接口一致
+
+### `ThreadPoolExecutor`
+
+![](/home/wangzheng/文档/notes/image/ThreadPoolExecutor.png)
+
+![](/home/wangzheng/文档/notes/image/dong&result&cancel.png)
+
+> `submit`: 立即返回，非阻塞
+>
+> `done`: 判定该线程是否执行成功，此时为False
+>
+> `result`: 得到执行的返回结果
+>
+> `cancel`: 取消掉某个任务，注意：执行中或执行完成的任务取消不掉
+
+### `concurrent.futures.as_completed`
+
+> 1. 获取已经成功的`task`的返回值
+>
+> 2. 返回顺序: 谁先完成返回谁
+
+`from concurrent.futures import as_completed`
+
+![](/home/wangzheng/文档/notes/image/as_completed.png)
+
+### `ThreadPoolExecutor.map`
+
+> 1. 获取已经成功的`task`返回值
+> 2. 返回顺序: 和传入的参数数组顺序一致
+
+`executor = ThreadPoolExecutor(max_works=2)`
+
+![](/home/wangzheng/文档/notes/image/ThreadPoolExecutor.map.png)
+
+### `concurrent.futures.wait`
+
+> - 使主线程阻塞，作用: 指定某一些`task`执行完成才继续往下执行
+>
+> `return_when`: 当什么时候不用等待
+>
+> `FIRST_COMPLETED`: `from concurrent.futures import FIRST_COMPLETED`，当第一个线程执行完返回
+
+![](/home/wangzheng/文档/notes/image/concurrent.futures.wait.png)
 
