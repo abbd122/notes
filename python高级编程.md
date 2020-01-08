@@ -677,3 +677,92 @@ print(a)  # 报错
 
 ![](/home/wangzheng/文档/notes/image/concurrent.futures.wait.png)
 
+### 多线程、多进程特点
+
+> 1. 耗`cpu`的操作使用多进程(计算，如数学计算、图形处理)，`io`操作使用多线程，因为进程切换代价高于线程
+> 2. 对于操作系统来说，开60个线程很轻松，但开60个进程很吃力
+
+#### `with ThreadPoolExecutor`
+
+![](/home/wangzheng/文档/notes/image/ThreadPoolExecutor with.png)
+
+#### `with ProcessPoolExecutor`
+
+![](/home/wangzheng/文档/notes/image/ProcessPoolExecutor with.png)
+
+### `multiprocessing`多进程编程
+
+![](/home/wangzheng/文档/notes/image/multiprocessing.png)
+
+#### 进程池
+
+![](/home/wangzheng/文档/notes/image/multiprocessing.Pool.png)
+
+- `imap`
+
+![](/home/wangzheng/文档/notes/image/Pool.imap.png)
+
+## 进程间通信
+
+> 1. 多进程不能使用`queue.Queue`，而要使用`multiprocessing.Queue`
+>
+> 2. 共享全局变量不适用于多进程，相互独立
+
+![](/home/wangzheng/文档/notes/image/multiprocessing.Queue.png)
+
+### `Manager().Queue`进程池间通信
+
+>  `multiprocessing.Queue`不能用于`Pool`进程池
+
+![](/home/wangzheng/文档/notes/image/Manager.queue.png)
+
+### `Pipe`通信
+
+> 1. `pipe`只能适用于两个进程间通信
+> 2. `pipe`的性能高于`queue`，在只有两个子进程时可以使用
+
+![](/home/wangzheng/文档/notes/image/Pipe.png)
+
+### `Manager.dict()`
+
+![](/home/wangzheng/文档/notes/image/Manager.dct.png)
+
+
+
+# 协程和异步`io`
+
+## 并发、并行、同步、异步、阻塞、非阻塞
+
+![](/home/wangzheng/文档/notes/image/并发、并行.png)
+
+![](/home/wangzheng/文档/notes/image/同步、异步.png)
+
+![](/home/wangzheng/文档/notes/image/阻塞、非阻塞.png)
+
+> 同步、异步是消息间的一种通信方式，阻塞和非阻塞是函数调用的一种机制
+
+## `C10k`问题和`io`多路复用
+
+![](/home/wangzheng/文档/notes/image/io.png)
+
+### `I/O`复用
+
+![](/home/wangzheng/文档/notes/image/io复用.png)
+
+> 1. `select`可以同时监听多个`socket`的状态，而while循环只能监听一个
+
+### 异步`I/O`
+
+> 目前很多高并发框架并没有使用`aio`异步，仅仅使用了`I/O`多路复用
+
+![](/home/wangzheng/文档/notes/image/异步io.png)
+
+### `select`, `poll`, `epoll`
+
+![](/home/wangzheng/文档/notes/image/select、poll、epoll.png)
+
+> `epoll`并不代表一定比`select`好
+>
+> - 在并发高的情况下，连接活跃度不是很高，`epoll`比`select`好
+> - 并发性不高，同时连接很活跃(例如游戏连接，连接后不会断掉)，`select`比`epoll`好
+
