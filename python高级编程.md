@@ -766,3 +766,9 @@ print(a)  # 报错
 > - 在并发高的情况下，连接活跃度不是很高，`epoll`比`select`好
 > - 并发性不高，同时连接很活跃(例如游戏连接，连接后不会断掉)，`select`比`epoll`好
 
+## `select`+回调+事件循环
+
+### `DefaultSelector`
+
+`from selector import DefaultSelector`
+
