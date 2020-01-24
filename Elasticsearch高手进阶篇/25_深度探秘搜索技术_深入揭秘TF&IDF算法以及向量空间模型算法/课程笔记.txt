@@ -1,67 +1,67 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢boolean model
+1ã€boolean model
 
-ÀàËÆandÕâÖÖÂß¼­²Ù×÷·û£¬ÏÈ¹ýÂË³ö°üº¬Ö¸¶¨termµÄdoc
+ç±»ä¼¼andè¿™ç§é€»è¾‘æ“ä½œç¬¦ï¼Œå…ˆè¿‡æ»¤å‡ºåŒ…å«æŒ‡å®štermçš„doc
 
-query "hello world" --> ¹ýÂË --> hello / world / hello & world
-bool --> must/must not/should --> ¹ýÂË --> °üº¬ / ²»°üº¬ / ¿ÉÄÜ°üº¬
-doc --> ²»´ò·ÖÊý --> Õý»ò·´ true or false --> ÎªÁË¼õÉÙºóÐøÒª¼ÆËãµÄdocµÄÊýÁ¿£¬ÌáÉýÐÔÄÜ
+query "hello world" --> è¿‡æ»¤ --> hello / world / hello & world
+bool --> must/must not/should --> è¿‡æ»¤ --> åŒ…å« / ä¸åŒ…å« / å¯èƒ½åŒ…å«
+doc --> ä¸æ‰“åˆ†æ•° --> æ­£æˆ–å true or false --> ä¸ºäº†å‡å°‘åŽç»­è¦è®¡ç®—çš„docçš„æ•°é‡ï¼Œæå‡æ€§èƒ½
 
-2¡¢TF/IDF
+2ã€TF/IDF
 
-µ¥¸ötermÔÚdocÖÐµÄ·ÖÊý
+å•ä¸ªtermåœ¨docä¸­çš„åˆ†æ•°
 
 query: hello world --> doc.content
 doc1: java is my favourite programming language, hello world !!!
 doc2: hello java, you are very good, oh hello world!!!
 
-hello¶Ôdoc1µÄÆÀ·Ö
+helloå¯¹doc1çš„è¯„åˆ†
 
 TF: term frequency 
 
-ÕÒµ½helloÔÚdoc1ÖÐ³öÏÖÁË¼¸´Î£¬1´Î£¬»á¸ù¾Ý³öÏÖµÄ´ÎÊý¸ø¸ö·ÖÊý
-Ò»¸ötermÔÚÒ»¸ödocÖÐ£¬³öÏÖµÄ´ÎÊýÔ½¶à£¬ÄÇÃ´×îºó¸øµÄÏà¹Ø¶ÈÆÀ·Ö¾Í»áÔ½¸ß
+æ‰¾åˆ°helloåœ¨doc1ä¸­å‡ºçŽ°äº†å‡ æ¬¡ï¼Œ1æ¬¡ï¼Œä¼šæ ¹æ®å‡ºçŽ°çš„æ¬¡æ•°ç»™ä¸ªåˆ†æ•°
+ä¸€ä¸ªtermåœ¨ä¸€ä¸ªdocä¸­ï¼Œå‡ºçŽ°çš„æ¬¡æ•°è¶Šå¤šï¼Œé‚£ä¹ˆæœ€åŽç»™çš„ç›¸å…³åº¦è¯„åˆ†å°±ä¼šè¶Šé«˜
 
-IDF£ºinversed document frequency
+IDFï¼šinversed document frequency
 
-ÕÒµ½helloÔÚËùÓÐµÄdocÖÐ³öÏÖµÄ´ÎÊý£¬3´Î
-Ò»¸ötermÔÚËùÓÐµÄdocÖÐ£¬³öÏÖµÄ´ÎÊýÔ½¶à£¬ÄÇÃ´×îºó¸øµÄÏà¹Ø¶ÈÆÀ·Ö¾Í»áÔ½µÍ
+æ‰¾åˆ°helloåœ¨æ‰€æœ‰çš„docä¸­å‡ºçŽ°çš„æ¬¡æ•°ï¼Œ3æ¬¡
+ä¸€ä¸ªtermåœ¨æ‰€æœ‰çš„docä¸­ï¼Œå‡ºçŽ°çš„æ¬¡æ•°è¶Šå¤šï¼Œé‚£ä¹ˆæœ€åŽç»™çš„ç›¸å…³åº¦è¯„åˆ†å°±ä¼šè¶Šä½Ž
 
 length norm
 
-helloËÑË÷µÄÄÇ¸öfieldµÄ³¤¶È£¬field³¤¶ÈÔ½³¤£¬¸øµÄÏà¹Ø¶ÈÆÀ·ÖÔ½µÍ; field³¤¶ÈÔ½¶Ì£¬¸øµÄÏà¹Ø¶ÈÆÀ·ÖÔ½¸ß
+helloæœç´¢çš„é‚£ä¸ªfieldçš„é•¿åº¦ï¼Œfieldé•¿åº¦è¶Šé•¿ï¼Œç»™çš„ç›¸å…³åº¦è¯„åˆ†è¶Šä½Ž; fieldé•¿åº¦è¶ŠçŸ­ï¼Œç»™çš„ç›¸å…³åº¦è¯„åˆ†è¶Šé«˜
 
-×îºó£¬»á½«helloÕâ¸öterm£¬¶Ôdoc1µÄ·ÖÊý£¬×ÛºÏTF£¬IDF£¬length norm£¬¼ÆËã³öÀ´Ò»¸ö×ÛºÏÐÔµÄ·ÖÊý
+æœ€åŽï¼Œä¼šå°†helloè¿™ä¸ªtermï¼Œå¯¹doc1çš„åˆ†æ•°ï¼Œç»¼åˆTFï¼ŒIDFï¼Œlength normï¼Œè®¡ç®—å‡ºæ¥ä¸€ä¸ªç»¼åˆæ€§çš„åˆ†æ•°
 
-hello world --> doc1 --> hello¶Ôdoc1µÄ·ÖÊý£¬world¶Ôdoc1µÄ·ÖÊý --> µ«ÊÇ×îºóhello world queryÒª¶Ôdoc1ÓÐÒ»¸ö×ÜµÄ·ÖÊý --> vector space model
+hello world --> doc1 --> helloå¯¹doc1çš„åˆ†æ•°ï¼Œworldå¯¹doc1çš„åˆ†æ•° --> ä½†æ˜¯æœ€åŽhello world queryè¦å¯¹doc1æœ‰ä¸€ä¸ªæ€»çš„åˆ†æ•° --> vector space model
 
-3¡¢vector space model
+3ã€vector space model
 
-¶à¸öterm¶ÔÒ»¸ödocµÄ×Ü·ÖÊý
+å¤šä¸ªtermå¯¹ä¸€ä¸ªdocçš„æ€»åˆ†æ•°
 
-hello world --> es»á¸ù¾Ýhello worldÔÚËùÓÐdocÖÐµÄÆÀ·ÖÇé¿ö£¬¼ÆËã³öÒ»¸öquery vector£¬queryÏòÁ¿
+hello world --> esä¼šæ ¹æ®hello worldåœ¨æ‰€æœ‰docä¸­çš„è¯„åˆ†æƒ…å†µï¼Œè®¡ç®—å‡ºä¸€ä¸ªquery vectorï¼Œqueryå‘é‡
 
-helloÕâ¸öterm£¬¸øµÄ»ùÓÚËùÓÐdocµÄÒ»¸öÆÀ·Ö¾ÍÊÇ2
-worldÕâ¸öterm£¬¸øµÄ»ùÓÚËùÓÐdocµÄÒ»¸öÆÀ·Ö¾ÍÊÇ5
+helloè¿™ä¸ªtermï¼Œç»™çš„åŸºäºŽæ‰€æœ‰docçš„ä¸€ä¸ªè¯„åˆ†å°±æ˜¯2
+worldè¿™ä¸ªtermï¼Œç»™çš„åŸºäºŽæ‰€æœ‰docçš„ä¸€ä¸ªè¯„åˆ†å°±æ˜¯5
 
 [2, 5]
 
 query vector
 
-doc vector£¬3¸ödoc£¬Ò»¸ö°üº¬1¸öterm£¬Ò»¸ö°üº¬ÁíÒ»¸öterm£¬Ò»¸ö°üº¬2¸öterm
+doc vectorï¼Œ3ä¸ªdocï¼Œä¸€ä¸ªåŒ…å«1ä¸ªtermï¼Œä¸€ä¸ªåŒ…å«å¦ä¸€ä¸ªtermï¼Œä¸€ä¸ªåŒ…å«2ä¸ªterm
 
-3¸ödoc
+3ä¸ªdoc
 
-doc1£º°üº¬hello --> [2, 0]
-doc2£º°üº¬world --> [0, 5]
-doc3£º°üº¬hello, world --> [2, 5]
+doc1ï¼šåŒ…å«hello --> [2, 0]
+doc2ï¼šåŒ…å«world --> [0, 5]
+doc3ï¼šåŒ…å«hello, world --> [2, 5]
 
-»á¸øÃ¿Ò»¸ödoc£¬ÄÃÃ¿¸öterm¼ÆËã³öÒ»¸ö·ÖÊýÀ´£¬helloÓÐÒ»¸ö·ÖÊý£¬worldÓÐÒ»¸ö·ÖÊý£¬ÔÙÄÃËùÓÐtermµÄ·ÖÊý×é³ÉÒ»¸ödoc vector
+ä¼šç»™æ¯ä¸€ä¸ªdocï¼Œæ‹¿æ¯ä¸ªtermè®¡ç®—å‡ºä¸€ä¸ªåˆ†æ•°æ¥ï¼Œhelloæœ‰ä¸€ä¸ªåˆ†æ•°ï¼Œworldæœ‰ä¸€ä¸ªåˆ†æ•°ï¼Œå†æ‹¿æ‰€æœ‰termçš„åˆ†æ•°ç»„æˆä¸€ä¸ªdoc vector
 
-»­ÔÚÒ»¸öÍ¼ÖÐ£¬È¡Ã¿¸ödoc vector¶Ôquery vectorµÄ»¡¶È£¬¸ø³öÃ¿¸ödoc¶Ô¶à¸ötermµÄ×Ü·ÖÊý
+ç”»åœ¨ä¸€ä¸ªå›¾ä¸­ï¼Œå–æ¯ä¸ªdoc vectorå¯¹query vectorçš„å¼§åº¦ï¼Œç»™å‡ºæ¯ä¸ªdocå¯¹å¤šä¸ªtermçš„æ€»åˆ†æ•°
 
-Ã¿¸ödoc vector¼ÆËã³ö¶Ôquery vectorµÄ»¡¶È£¬×îºó»ùÓÚÕâ¸ö»¡¶È¸ø³öÒ»¸ödocÏà¶ÔÓÚqueryÖÐ¶à¸ötermµÄ×Ü·ÖÊý
-»¡¶ÈÔ½´ó£¬·ÖÊýÔÂµ×; »¡¶ÈÔ½Ð¡£¬·ÖÊýÔ½¸ß
+æ¯ä¸ªdoc vectorè®¡ç®—å‡ºå¯¹query vectorçš„å¼§åº¦ï¼Œæœ€åŽåŸºäºŽè¿™ä¸ªå¼§åº¦ç»™å‡ºä¸€ä¸ªdocç›¸å¯¹äºŽqueryä¸­å¤šä¸ªtermçš„æ€»åˆ†æ•°
+å¼§åº¦è¶Šå¤§ï¼Œåˆ†æ•°æœˆåº•; å¼§åº¦è¶Šå°ï¼Œåˆ†æ•°è¶Šé«˜
 
-Èç¹ûÊÇ¶à¸öterm£¬ÄÇÃ´¾ÍÊÇÏßÐÔ´úÊýÀ´¼ÆËã£¬ÎÞ·¨ÓÃÍ¼±íÊ¾
+å¦‚æžœæ˜¯å¤šä¸ªtermï¼Œé‚£ä¹ˆå°±æ˜¯çº¿æ€§ä»£æ•°æ¥è®¡ç®—ï¼Œæ— æ³•ç”¨å›¾è¡¨ç¤º

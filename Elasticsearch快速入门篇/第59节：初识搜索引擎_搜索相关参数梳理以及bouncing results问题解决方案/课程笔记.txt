@@ -1,25 +1,25 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢preference
+1ã€preference
 
-¾ö¶¨ÁËÄÄĞ©shard»á±»ÓÃÀ´Ö´ĞĞËÑË÷²Ù×÷
+å†³å®šäº†å“ªäº›shardä¼šè¢«ç”¨æ¥æ‰§è¡Œæœç´¢æ“ä½œ
 
 _primary, _primary_first, _local, _only_node:xyz, _prefer_node:xyz, _shards:2,3
 
-bouncing resultsÎÊÌâ£¬Á½¸ödocumentÅÅĞò£¬fieldÖµÏàÍ¬£»²»Í¬µÄshardÉÏ£¬¿ÉÄÜÅÅĞò²»Í¬£»Ã¿´ÎÇëÇóÂÖÑ¯´òµ½²»Í¬µÄreplica shardÉÏ£»Ã¿´ÎÒ³ÃæÉÏ¿´µ½µÄËÑË÷½á¹ûµÄÅÅĞò¶¼²»Ò»Ñù¡£Õâ¾ÍÊÇbouncing result£¬Ò²¾ÍÊÇÌøÔ¾µÄ½á¹û¡£
+bouncing resultsé—®é¢˜ï¼Œä¸¤ä¸ªdocumentæ’åºï¼Œfieldå€¼ç›¸åŒï¼›ä¸åŒçš„shardä¸Šï¼Œå¯èƒ½æ’åºä¸åŒï¼›æ¯æ¬¡è¯·æ±‚è½®è¯¢æ‰“åˆ°ä¸åŒçš„replica shardä¸Šï¼›æ¯æ¬¡é¡µé¢ä¸Šçœ‹åˆ°çš„æœç´¢ç»“æœçš„æ’åºéƒ½ä¸ä¸€æ ·ã€‚è¿™å°±æ˜¯bouncing resultï¼Œä¹Ÿå°±æ˜¯è·³è·ƒçš„ç»“æœã€‚
 
-ËÑË÷µÄÊ±ºò£¬ÊÇÂÖÑ¯½«ËÑË÷ÇëÇó·¢ËÍµ½Ã¿Ò»¸öreplica shard£¨primary shard£©£¬µ«ÊÇÔÚ²»Í¬µÄshardÉÏ£¬¿ÉÄÜdocumentµÄÅÅĞò²»Í¬
+æœç´¢çš„æ—¶å€™ï¼Œæ˜¯è½®è¯¢å°†æœç´¢è¯·æ±‚å‘é€åˆ°æ¯ä¸€ä¸ªreplica shardï¼ˆprimary shardï¼‰ï¼Œä½†æ˜¯åœ¨ä¸åŒçš„shardä¸Šï¼Œå¯èƒ½documentçš„æ’åºä¸åŒ
 
-½â¾ö·½°¸¾ÍÊÇ½«preferenceÉèÖÃÎªÒ»¸ö×Ö·û´®£¬±ÈÈçËµuser_id£¬ÈÃÃ¿¸öuserÃ¿´ÎËÑË÷µÄÊ±ºò£¬¶¼Ê¹ÓÃÍ¬Ò»¸öreplica shardÈ¥Ö´ĞĞ£¬¾Í²»»á¿´µ½bouncing resultsÁË
+è§£å†³æ–¹æ¡ˆå°±æ˜¯å°†preferenceè®¾ç½®ä¸ºä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œæ¯”å¦‚è¯´user_idï¼Œè®©æ¯ä¸ªuseræ¯æ¬¡æœç´¢çš„æ—¶å€™ï¼Œéƒ½ä½¿ç”¨åŒä¸€ä¸ªreplica shardå»æ‰§è¡Œï¼Œå°±ä¸ä¼šçœ‹åˆ°bouncing resultsäº†
 
-2¡¢timeout£¬ÒÑ¾­½²½â¹ıÔ­ÀíÁË£¬Ö÷Òª¾ÍÊÇÏŞ¶¨ÔÚÒ»¶¨Ê±¼äÄÚ£¬½«²¿·Ö»ñÈ¡µ½µÄÊı¾İÖ±½Ó·µ»Ø£¬±ÜÃâ²éÑ¯ºÄÊ±¹ı³¤
+2ã€timeoutï¼Œå·²ç»è®²è§£è¿‡åŸç†äº†ï¼Œä¸»è¦å°±æ˜¯é™å®šåœ¨ä¸€å®šæ—¶é—´å†…ï¼Œå°†éƒ¨åˆ†è·å–åˆ°çš„æ•°æ®ç›´æ¥è¿”å›ï¼Œé¿å…æŸ¥è¯¢è€—æ—¶è¿‡é•¿
 
-3¡¢routing£¬documentÎÄµµÂ·ÓÉ£¬_idÂ·ÓÉ£¬routing=user_id£¬ÕâÑùµÄ»°¿ÉÒÔÈÃÍ¬Ò»¸öuser¶ÔÓ¦µÄÊı¾İµ½Ò»¸öshardÉÏÈ¥
+3ã€routingï¼Œdocumentæ–‡æ¡£è·¯ç”±ï¼Œ_idè·¯ç”±ï¼Œrouting=user_idï¼Œè¿™æ ·çš„è¯å¯ä»¥è®©åŒä¸€ä¸ªuserå¯¹åº”çš„æ•°æ®åˆ°ä¸€ä¸ªshardä¸Šå»
 
-4¡¢search_type
+4ã€search_type
 
-default£ºquery_then_fetch
-dfs_query_then_fetch£¬¿ÉÒÔÌáÉırevelance sort¾«×¼¶È
+defaultï¼šquery_then_fetch
+dfs_query_then_fetchï¼Œå¯ä»¥æå‡revelance sortç²¾å‡†åº¦
 
 
 

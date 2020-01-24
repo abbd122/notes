@@ -1,10 +1,10 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢¶¨ÖÆdynamic²ßÂÔ
+1ã€å®šåˆ¶dynamicç­–ç•¥
 
-true£ºÓöµ½Ä°Éú×Ö¶Î£¬¾Í½øĞĞdynamic mapping
-false£ºÓöµ½Ä°Éú×Ö¶Î£¬¾ÍºöÂÔ
-strict£ºÓöµ½Ä°Éú×Ö¶Î£¬¾Í±¨´í
+trueï¼šé‡åˆ°é™Œç”Ÿå­—æ®µï¼Œå°±è¿›è¡Œdynamic mapping
+falseï¼šé‡åˆ°é™Œç”Ÿå­—æ®µï¼Œå°±å¿½ç•¥
+strictï¼šé‡åˆ°é™Œç”Ÿå­—æ®µï¼Œå°±æŠ¥é”™
 
 PUT /my_index
 {
@@ -97,18 +97,18 @@ GET /my_index/_mapping/my_type
   }
 }
 
-2¡¢¶¨ÖÆdynamic mapping²ßÂÔ
+2ã€å®šåˆ¶dynamic mappingç­–ç•¥
 
-£¨1£©date_detection
+ï¼ˆ1ï¼‰date_detection
 
-Ä¬ÈÏ»á°´ÕÕÒ»¶¨¸ñÊ½Ê¶±ğdate£¬±ÈÈçyyyy-MM-dd¡£µ«ÊÇÈç¹ûÄ³¸öfieldÏÈ¹ıÀ´Ò»¸ö2017-01-01µÄÖµ£¬¾Í»á±»×Ô¶¯dynamic mapping³Édate£¬ºóÃæÈç¹ûÔÙÀ´Ò»¸ö"hello world"Ö®ÀàµÄÖµ£¬¾Í»á±¨´í¡£¿ÉÒÔÊÖ¶¯¹Ø±ÕÄ³¸ötypeµÄdate_detection£¬Èç¹ûÓĞĞèÒª£¬×Ô¼ºÊÖ¶¯Ö¸¶¨Ä³¸öfieldÎªdateÀàĞÍ¡£
+é»˜è®¤ä¼šæŒ‰ç…§ä¸€å®šæ ¼å¼è¯†åˆ«dateï¼Œæ¯”å¦‚yyyy-MM-ddã€‚ä½†æ˜¯å¦‚æœæŸä¸ªfieldå…ˆè¿‡æ¥ä¸€ä¸ª2017-01-01çš„å€¼ï¼Œå°±ä¼šè¢«è‡ªåŠ¨dynamic mappingæˆdateï¼Œåé¢å¦‚æœå†æ¥ä¸€ä¸ª"hello world"ä¹‹ç±»çš„å€¼ï¼Œå°±ä¼šæŠ¥é”™ã€‚å¯ä»¥æ‰‹åŠ¨å…³é—­æŸä¸ªtypeçš„date_detectionï¼Œå¦‚æœæœ‰éœ€è¦ï¼Œè‡ªå·±æ‰‹åŠ¨æŒ‡å®šæŸä¸ªfieldä¸ºdateç±»å‹ã€‚
 
 PUT /my_index/_mapping/my_type
 {
     "date_detection": false
 }
 
-£¨2£©¶¨ÖÆ×Ô¼ºµÄdynamic mapping template£¨type level£©
+ï¼ˆ2ï¼‰å®šåˆ¶è‡ªå·±çš„dynamic mapping templateï¼ˆtype levelï¼‰
 
 PUT /my_index
 {
@@ -136,10 +136,10 @@ PUT /my_index/my_type/2
   "title_en": "this is my first article"
 }
 
-titleÃ»ÓĞÆ¥Åäµ½ÈÎºÎµÄdynamicÄ£°å£¬Ä¬ÈÏ¾ÍÊÇstandard·Ö´ÊÆ÷£¬²»»á¹ıÂËÍ£ÓÃ´Ê£¬is»á½øÈëµ¹ÅÅË÷Òı£¬ÓÃisÀ´ËÑË÷ÊÇ¿ÉÒÔËÑË÷µ½µÄ
-title_enÆ¥Åäµ½ÁËdynamicÄ£°å£¬¾ÍÊÇenglish·Ö´ÊÆ÷£¬»á¹ıÂËÍ£ÓÃ´Ê£¬isÕâÖÖÍ£ÓÃ´Ê¾Í»á±»¹ıÂËµô£¬ÓÃisÀ´ËÑË÷¾ÍËÑË÷²»µ½ÁË
+titleæ²¡æœ‰åŒ¹é…åˆ°ä»»ä½•çš„dynamicæ¨¡æ¿ï¼Œé»˜è®¤å°±æ˜¯standardåˆ†è¯å™¨ï¼Œä¸ä¼šè¿‡æ»¤åœç”¨è¯ï¼Œisä¼šè¿›å…¥å€’æ’ç´¢å¼•ï¼Œç”¨isæ¥æœç´¢æ˜¯å¯ä»¥æœç´¢åˆ°çš„
+title_enåŒ¹é…åˆ°äº†dynamicæ¨¡æ¿ï¼Œå°±æ˜¯englishåˆ†è¯å™¨ï¼Œä¼šè¿‡æ»¤åœç”¨è¯ï¼Œisè¿™ç§åœç”¨è¯å°±ä¼šè¢«è¿‡æ»¤æ‰ï¼Œç”¨isæ¥æœç´¢å°±æœç´¢ä¸åˆ°äº†
 
-£¨3£©¶¨ÖÆ×Ô¼ºµÄdefault mapping template£¨index level£©
+ï¼ˆ3ï¼‰å®šåˆ¶è‡ªå·±çš„default mapping templateï¼ˆindex levelï¼‰
 
 PUT /my_index
 {

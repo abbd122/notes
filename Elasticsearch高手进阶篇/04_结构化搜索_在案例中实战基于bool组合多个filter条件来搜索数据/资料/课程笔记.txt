@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢ËÑË÷·¢ÌûÈÕÆÚÎª2017-01-01£¬»òÕßÌû×ÓIDÎªXHDK-A-1293-#fJ3µÄÌû×Ó£¬Í¬Ê±ÒªÇóÌû×ÓµÄ·¢ÌûÈÕÆÚ¾ø¶Ô²»Îª2017-01-02
+1ã€æœç´¢å‘å¸–æ—¥æœŸä¸º2017-01-01ï¼Œæˆ–è€…å¸–å­IDä¸ºXHDK-A-1293-#fJ3çš„å¸–å­ï¼ŒåŒæ—¶è¦æ±‚å¸–å­çš„å‘å¸–æ—¥æœŸç»å¯¹ä¸ä¸º2017-01-02
 
 select *
 from forum.article
@@ -28,9 +28,9 @@ GET /forum/article/_search
   }
 }
 
-must£¬should£¬must_not£¬filter£º±ØÐëÆ¥Åä£¬¿ÉÒÔÆ¥ÅäÆäÖÐÈÎÒâÒ»¸ö¼´¿É£¬±ØÐë²»Æ¥Åä
+mustï¼Œshouldï¼Œmust_notï¼Œfilterï¼šå¿…é¡»åŒ¹é…ï¼Œå¯ä»¥åŒ¹é…å…¶ä¸­ä»»æ„ä¸€ä¸ªå³å¯ï¼Œå¿…é¡»ä¸åŒ¹é…
 
-2¡¢ËÑË÷Ìû×ÓIDÎªXHDK-A-1293-#fJ3£¬»òÕßÊÇÌû×ÓIDÎªJODL-X-1937-#pV7¶øÇÒ·¢ÌûÈÕÆÚÎª2017-01-01µÄÌû×Ó
+2ã€æœç´¢å¸–å­IDä¸ºXHDK-A-1293-#fJ3ï¼Œæˆ–è€…æ˜¯å¸–å­IDä¸ºJODL-X-1937-#pV7è€Œä¸”å‘å¸–æ—¥æœŸä¸º2017-01-01çš„å¸–å­
 
 select *
 from forum.article
@@ -72,10 +72,10 @@ GET /forum/article/_search
   }
 }
 
-3¡¢ÊáÀíÑ§µ½µÄÖªÊ¶µã
+3ã€æ¢³ç†å­¦åˆ°çš„çŸ¥è¯†ç‚¹
 
-£¨1£©bool£ºmust£¬must_not£¬should£¬×éºÏ¶à¸ö¹ýÂËÌõ¼þ
-£¨2£©bool¿ÉÒÔÇ¶Ì×
-£¨3£©Ïàµ±ÓÚSQLÖÐµÄ¶à¸öandÌõ¼þ£ºµ±Äã°ÑËÑË÷Óï·¨Ñ§ºÃÁËÒÔºó£¬»ù±¾¿ÉÒÔÊµÏÖ²¿·Ö³£ÓÃµÄsqlÓï·¨¶ÔÓ¦µÄ¹¦ÄÜ
+ï¼ˆ1ï¼‰boolï¼šmustï¼Œmust_notï¼Œshouldï¼Œç»„åˆå¤šä¸ªè¿‡æ»¤æ¡ä»¶
+ï¼ˆ2ï¼‰boolå¯ä»¥åµŒå¥—
+ï¼ˆ3ï¼‰ç›¸å½“äºŽSQLä¸­çš„å¤šä¸ªandæ¡ä»¶ï¼šå½“ä½ æŠŠæœç´¢è¯­æ³•å­¦å¥½äº†ä»¥åŽï¼ŒåŸºæœ¬å¯ä»¥å®žçŽ°éƒ¨åˆ†å¸¸ç”¨çš„sqlè¯­æ³•å¯¹åº”çš„åŠŸèƒ½
 
 

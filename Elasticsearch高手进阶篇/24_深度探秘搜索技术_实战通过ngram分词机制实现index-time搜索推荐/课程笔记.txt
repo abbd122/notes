@@ -1,18 +1,18 @@
-1��ngram��index-time�����Ƽ�ԭ��
+1、ngram和index-time搜索推荐原理
 
-ʲô��ngram
+什么是ngram
 
-quick��5�ֳ����µ�ngram
+quick，5种长度下的ngram
 
-ngram length=1��q u i c k
-ngram length=2��qu ui ic ck
-ngram length=3��qui uic ick
-ngram length=4��quic uick
-ngram length=5��quick
+ngram length=1，q u i c k
+ngram length=2，qu ui ic ck
+ngram length=3，qui uic ick
+ngram length=4，quic uick
+ngram length=5，quick
 
-ʲô��edge ngram
+什么是edge ngram
 
-quick��anchor����ĸ�����ngram
+quick，anchor首字母后进行ngram
 
 q
 qu
@@ -20,7 +20,7 @@ qui
 quic
 quick
 
-ʹ��edge ngram��ÿ�����ʶ����н�һ���ķִ��з֣����зֺ��ngram��ʵ��ǰ׺�����Ƽ�����
+使用edge ngram将每个单词都进行进一步的分词切分，用切分后的ngram来实现前缀搜索推荐功能
 
 hello world
 hello we
@@ -49,14 +49,14 @@ hel
 
 hello w
 
-hello --> hello��doc1
-w --> w��doc1
+hello --> hello，doc1
+w --> w，doc1
 
-doc1��hello��w������positionҲƥ�䣬���ԣ�ok��doc1���أ�hello world
+doc1，hello和w，而且position也匹配，所以，ok，doc1返回，hello world
 
-������ʱ�򣬲����ٸ���һ��ǰ׺��Ȼ��ɨ����������������; �򵥵���ǰ׺ȥ����������ƥ�伴�ɣ����ƥ�����ˣ���ô�ͺ���; match��ȫ�ļ���
+搜索的时候，不用再根据一个前缀，然后扫描整个倒排索引了; 简单的拿前缀去倒排索引中匹配即可，如果匹配上了，那么就好了; match，全文检索
 
-2��ʵ��һ��ngram
+2、实验一下ngram
 
 PUT /my_index
 {
@@ -135,8 +135,8 @@ GET /my_index/my_type/_search
   }
 }
 
-�����match��ֻ��hello��Ҳ�������ȫ�ļ�����ֻ�Ƿ����Ƚϵ�
-�Ƽ�ʹ��match_phrase��Ҫ��ÿ��term���У�����position�պÿ���1λ���������ǵ�������
+如果用match，只有hello的也会出来，全文检索，只是分数比较低
+推荐使用match_phrase，要求每个term都有，而且position刚好靠着1位，符合我们的期望的
 
 
 

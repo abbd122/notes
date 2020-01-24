@@ -1,7 +1,7 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Í¼½â2¸önode»·¾³ÏÂreplica shardÊÇÈçºÎ·ÖÅäµÄ
+1ã€å›¾è§£2ä¸ªnodeç¯å¢ƒä¸‹replica shardæ˜¯å¦‚ä½•åˆ†é…çš„
 
-£¨1£©replica shard·ÖÅä£º3¸öprimary shard£¬3¸öreplica shard£¬1 node
-£¨2£©primary ---> replicaÍ¬²½
-£¨3£©¶ÁÇëÇó£ºprimary/replica
+ï¼ˆ1ï¼‰replica shardåˆ†é…ï¼š3ä¸ªprimary shardï¼Œ3ä¸ªreplica shardï¼Œ1 node
+ï¼ˆ2ï¼‰primary ---> replicaåŒæ­¥
+ï¼ˆ3ï¼‰è¯»è¯·æ±‚ï¼šprimary/replica

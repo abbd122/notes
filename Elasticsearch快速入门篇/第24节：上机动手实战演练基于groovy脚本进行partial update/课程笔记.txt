@@ -1,8 +1,8 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-es£¬ÆäÊµÊÇÓĞ¸öÄÚÖÃµÄ½Å±¾Ö§³ÖµÄ£¬¿ÉÒÔ»ùÓÚgroovy½Å±¾ÊµÏÖ¸÷ÖÖ¸÷ÑùµÄ¸´ÔÓ²Ù×÷
-»ùÓÚgroovy½Å±¾£¬ÈçºÎÖ´ĞĞpartial update
-es scripting module£¬ÎÒÃÇ»áÔÚ¸ßÊÖ½ø½×ÆªÈ¥½²½â£¬ÕâÀï¾ÍÖ»ÊÇ³õ²½½²½âÒ»ÏÂ
+esï¼Œå…¶å®æ˜¯æœ‰ä¸ªå†…ç½®çš„è„šæœ¬æ”¯æŒçš„ï¼Œå¯ä»¥åŸºäºgroovyè„šæœ¬å®ç°å„ç§å„æ ·çš„å¤æ‚æ“ä½œ
+åŸºäºgroovyè„šæœ¬ï¼Œå¦‚ä½•æ‰§è¡Œpartial update
+es scripting moduleï¼Œæˆ‘ä»¬ä¼šåœ¨é«˜æ‰‹è¿›é˜¶ç¯‡å»è®²è§£ï¼Œè¿™é‡Œå°±åªæ˜¯åˆæ­¥è®²è§£ä¸€ä¸‹
 
 PUT /test_index/test_type/11
 {
@@ -10,7 +10,7 @@ PUT /test_index/test_type/11
   "tags": []
 }
 
-£¨1£©ÄÚÖÃ½Å±¾
+ï¼ˆ1ï¼‰å†…ç½®è„šæœ¬
 
 POST /test_index/test_type/11/_update
 {
@@ -29,7 +29,7 @@ POST /test_index/test_type/11/_update
   }
 }
 
-£¨2£©Íâ²¿½Å±¾
+ï¼ˆ2ï¼‰å¤–éƒ¨è„šæœ¬
 
 ctx._source.tags+=new_tag
 
@@ -44,7 +44,7 @@ POST /test_index/test_type/11/_update
   }
 }
 
-£¨3£©ÓÃ½Å±¾É¾³ıÎÄµµ
+ï¼ˆ3ï¼‰ç”¨è„šæœ¬åˆ é™¤æ–‡æ¡£
 
 ctx.op = ctx._source.num == count ? 'delete' : 'none'
 
@@ -59,7 +59,7 @@ POST /test_index/test_type/11/_update
   }
 }
 
-£¨4£©upsert²Ù×÷
+ï¼ˆ4ï¼‰upsertæ“ä½œ
 
 POST /test_index/test_type/11/_update
 {
@@ -88,7 +88,7 @@ POST /test_index/test_type/11/_update
   "status": 404
 }
 
-Èç¹ûÖ¸¶¨µÄdocument²»´æÔÚ£¬¾ÍÖ´ĞĞupsertÖĞµÄ³õÊ¼»¯²Ù×÷£»Èç¹ûÖ¸¶¨µÄdocument´æÔÚ£¬¾ÍÖ´ĞĞdoc»òÕßscriptÖ¸¶¨µÄpartial update²Ù×÷
+å¦‚æœæŒ‡å®šçš„documentä¸å­˜åœ¨ï¼Œå°±æ‰§è¡Œupsertä¸­çš„åˆå§‹åŒ–æ“ä½œï¼›å¦‚æœæŒ‡å®šçš„documentå­˜åœ¨ï¼Œå°±æ‰§è¡Œdocæˆ–è€…scriptæŒ‡å®šçš„partial updateæ“ä½œ
 
 POST /test_index/test_type/11/_update
 {

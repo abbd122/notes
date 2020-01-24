@@ -1,12 +1,12 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢fetch phbase¹¤×÷Á÷³Ì
+1ã€fetch phbaseå·¥ä½œæµç¨‹
 
-£¨1£©coordinate node¹¹½¨Íêpriority queueÖ®ºó£¬¾Í·¢ËÍmgetÇëÇóÈ¥ËùÓĞshardÉÏ»ñÈ¡¶ÔÓ¦µÄdocument
-£¨2£©¸÷¸öshard½«document·µ»Ø¸øcoordinate node
-£¨3£©coordinate node½«ºÏ²¢ºóµÄdocument½á¹û·µ»Ø¸øclient¿Í»§¶Ë
+ï¼ˆ1ï¼‰coordinate nodeæ„å»ºå®Œpriority queueä¹‹åï¼Œå°±å‘é€mgetè¯·æ±‚å»æ‰€æœ‰shardä¸Šè·å–å¯¹åº”çš„document
+ï¼ˆ2ï¼‰å„ä¸ªshardå°†documentè¿”å›ç»™coordinate node
+ï¼ˆ3ï¼‰coordinate nodeå°†åˆå¹¶åçš„documentç»“æœè¿”å›ç»™clientå®¢æˆ·ç«¯
 
-2¡¢Ò»°ãËÑË÷£¬Èç¹û²»¼ÓfromºÍsize£¬¾ÍÄ¬ÈÏËÑË÷Ç°10Ìõ£¬°´ÕÕ_scoreÅÅĞò
+2ã€ä¸€èˆ¬æœç´¢ï¼Œå¦‚æœä¸åŠ fromå’Œsizeï¼Œå°±é»˜è®¤æœç´¢å‰10æ¡ï¼ŒæŒ‰ç…§_scoreæ’åº
 
 
 

@@ -1,41 +1,41 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Ëã·¨½éÉÜ
+1ã€ç®—æ³•ä»‹ç»
 
-relevance scoreËã·¨£¬¼òµ¥À´Ëµ£¬¾ÍÊÇ¼ÆËã³ö£¬Ò»¸öË÷ÒıÖĞµÄÎÄ±¾£¬ÓëËÑË÷ÎÄ±¾£¬ËûÃÇÖ®¼äµÄ¹ØÁªÆ¥Åä³Ì¶È
+relevance scoreç®—æ³•ï¼Œç®€å•æ¥è¯´ï¼Œå°±æ˜¯è®¡ç®—å‡ºï¼Œä¸€ä¸ªç´¢å¼•ä¸­çš„æ–‡æœ¬ï¼Œä¸æœç´¢æ–‡æœ¬ï¼Œä»–ä»¬ä¹‹é—´çš„å…³è”åŒ¹é…ç¨‹åº¦
 
-ElasticsearchÊ¹ÓÃµÄÊÇ term frequency/inverse document frequencyËã·¨£¬¼ò³ÆÎªTF/IDFËã·¨
+Elasticsearchä½¿ç”¨çš„æ˜¯ term frequency/inverse document frequencyç®—æ³•ï¼Œç®€ç§°ä¸ºTF/IDFç®—æ³•
 
-Term frequency£ºËÑË÷ÎÄ±¾ÖĞµÄ¸÷¸ö´ÊÌõÔÚfieldÎÄ±¾ÖĞ³öÏÖÁË¶àÉÙ´Î£¬³öÏÖ´ÎÊıÔ½¶à£¬¾ÍÔ½Ïà¹Ø
+Term frequencyï¼šæœç´¢æ–‡æœ¬ä¸­çš„å„ä¸ªè¯æ¡åœ¨fieldæ–‡æœ¬ä¸­å‡ºç°äº†å¤šå°‘æ¬¡ï¼Œå‡ºç°æ¬¡æ•°è¶Šå¤šï¼Œå°±è¶Šç›¸å…³
 
-ËÑË÷ÇëÇó£ºhello world
+æœç´¢è¯·æ±‚ï¼šhello world
 
-doc1£ºhello you, and world is very good
-doc2£ºhello, how are you
+doc1ï¼šhello you, and world is very good
+doc2ï¼šhello, how are you
 
-Inverse document frequency£ºËÑË÷ÎÄ±¾ÖĞµÄ¸÷¸ö´ÊÌõÔÚÕû¸öË÷ÒıµÄËùÓĞÎÄµµÖĞ³öÏÖÁË¶àÉÙ´Î£¬³öÏÖµÄ´ÎÊıÔ½¶à£¬¾ÍÔ½²»Ïà¹Ø
+Inverse document frequencyï¼šæœç´¢æ–‡æœ¬ä¸­çš„å„ä¸ªè¯æ¡åœ¨æ•´ä¸ªç´¢å¼•çš„æ‰€æœ‰æ–‡æ¡£ä¸­å‡ºç°äº†å¤šå°‘æ¬¡ï¼Œå‡ºç°çš„æ¬¡æ•°è¶Šå¤šï¼Œå°±è¶Šä¸ç›¸å…³
 
-ËÑË÷ÇëÇó£ºhello world
+æœç´¢è¯·æ±‚ï¼šhello world
 
-doc1£ºhello, today is very good
-doc2£ºhi world, how are you
+doc1ï¼šhello, today is very good
+doc2ï¼šhi world, how are you
 
-±ÈÈçËµ£¬ÔÚindexÖĞÓĞ1ÍòÌõdocument£¬helloÕâ¸öµ¥´ÊÔÚËùÓĞµÄdocumentÖĞ£¬Ò»¹²³öÏÖÁË1000´Î£»worldÕâ¸öµ¥´ÊÔÚËùÓĞµÄdocumentÖĞ£¬Ò»¹²³öÏÖÁË100´Î
+æ¯”å¦‚è¯´ï¼Œåœ¨indexä¸­æœ‰1ä¸‡æ¡documentï¼Œhelloè¿™ä¸ªå•è¯åœ¨æ‰€æœ‰çš„documentä¸­ï¼Œä¸€å…±å‡ºç°äº†1000æ¬¡ï¼›worldè¿™ä¸ªå•è¯åœ¨æ‰€æœ‰çš„documentä¸­ï¼Œä¸€å…±å‡ºç°äº†100æ¬¡
 
-doc2¸üÏà¹Ø
+doc2æ›´ç›¸å…³
 
-Field-length norm£ºfield³¤¶È£¬fieldÔ½³¤£¬Ïà¹Ø¶ÈÔ½Èõ
+Field-length normï¼šfieldé•¿åº¦ï¼Œfieldè¶Šé•¿ï¼Œç›¸å…³åº¦è¶Šå¼±
 
-ËÑË÷ÇëÇó£ºhello world
+æœç´¢è¯·æ±‚ï¼šhello world
 
-doc1£º{ "title": "hello article", "content": "babaaba 1Íò¸öµ¥´Ê" }
-doc2£º{ "title": "my article", "content": "blablabala 1Íò¸öµ¥´Ê£¬hi world" }
+doc1ï¼š{ "title": "hello article", "content": "babaaba 1ä¸‡ä¸ªå•è¯" }
+doc2ï¼š{ "title": "my article", "content": "blablabala 1ä¸‡ä¸ªå•è¯ï¼Œhi world" }
 
-hello worldÔÚÕû¸öindexÖĞ³öÏÖµÄ´ÎÊıÊÇÒ»Ñù¶àµÄ
+hello worldåœ¨æ•´ä¸ªindexä¸­å‡ºç°çš„æ¬¡æ•°æ˜¯ä¸€æ ·å¤šçš„
 
-doc1¸üÏà¹Ø£¬title field¸ü¶Ì
+doc1æ›´ç›¸å…³ï¼Œtitle fieldæ›´çŸ­
 
-2¡¢_scoreÊÇÈçºÎ±»¼ÆËã³öÀ´µÄ
+2ã€_scoreæ˜¯å¦‚ä½•è¢«è®¡ç®—å‡ºæ¥çš„
 
 GET /test_index/test_type/_search?explain
 {
@@ -557,7 +557,7 @@ GET /test_index/test_type/_search?explain
   }
 }
 
-3¡¢·ÖÎöÒ»¸ödocumentÊÇÈçºÎ±»Æ¥ÅäÉÏµÄ
+3ã€åˆ†æä¸€ä¸ªdocumentæ˜¯å¦‚ä½•è¢«åŒ¹é…ä¸Šçš„
 
 GET /test_index/test_type/6/_explain
 {

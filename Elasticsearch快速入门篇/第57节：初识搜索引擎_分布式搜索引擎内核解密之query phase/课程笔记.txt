@@ -1,13 +1,13 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢query phase
+1ã€query phase
 
-£¨1£©ËÑË÷ÇëÇó·¢ËÍµ½Ä³Ò»¸öcoordinate node£¬¹¹¹¹½¨Ò»¸öpriority queue£¬³¤¶ÈÒÔpaging²Ù×÷fromºÍsizeÎª×¼£¬Ä¬ÈÏÎª10
-£¨2£©coordinate node½«ÇëÇó×ª·¢µ½ËùÓĞshard£¬Ã¿¸öshard±¾µØËÑË÷£¬²¢¹¹½¨Ò»¸ö±¾µØµÄpriority queue
-£¨3£©¸÷¸öshard½«×Ô¼ºµÄpriority queue·µ»Ø¸øcoordinate node£¬²¢¹¹½¨Ò»¸öÈ«¾ÖµÄpriority queue
+ï¼ˆ1ï¼‰æœç´¢è¯·æ±‚å‘é€åˆ°æŸä¸€ä¸ªcoordinate nodeï¼Œæ„æ„å»ºä¸€ä¸ªpriority queueï¼Œé•¿åº¦ä»¥pagingæ“ä½œfromå’Œsizeä¸ºå‡†ï¼Œé»˜è®¤ä¸º10
+ï¼ˆ2ï¼‰coordinate nodeå°†è¯·æ±‚è½¬å‘åˆ°æ‰€æœ‰shardï¼Œæ¯ä¸ªshardæœ¬åœ°æœç´¢ï¼Œå¹¶æ„å»ºä¸€ä¸ªæœ¬åœ°çš„priority queue
+ï¼ˆ3ï¼‰å„ä¸ªshardå°†è‡ªå·±çš„priority queueè¿”å›ç»™coordinate nodeï¼Œå¹¶æ„å»ºä¸€ä¸ªå…¨å±€çš„priority queue
 
-2¡¢replica shardÈçºÎÌáÉıËÑË÷ÍÌÍÂÁ¿
+2ã€replica shardå¦‚ä½•æå‡æœç´¢ååé‡
 
-Ò»´ÎÇëÇóÒª´òµ½ËùÓĞshardµÄÒ»¸öreplica/primaryÉÏÈ¥£¬Èç¹ûÃ¿¸öshard¶¼ÓĞ¶à¸öreplica£¬ÄÇÃ´Í¬Ê±²¢·¢¹ıÀ´µÄËÑË÷ÇëÇó¿ÉÒÔÍ¬Ê±´òµ½ÆäËûµÄreplicaÉÏÈ¥
+ä¸€æ¬¡è¯·æ±‚è¦æ‰“åˆ°æ‰€æœ‰shardçš„ä¸€ä¸ªreplica/primaryä¸Šå»ï¼Œå¦‚æœæ¯ä¸ªshardéƒ½æœ‰å¤šä¸ªreplicaï¼Œé‚£ä¹ˆåŒæ—¶å¹¶å‘è¿‡æ¥çš„æœç´¢è¯·æ±‚å¯ä»¥åŒæ—¶æ‰“åˆ°å…¶ä»–çš„replicaä¸Šå»
 
 

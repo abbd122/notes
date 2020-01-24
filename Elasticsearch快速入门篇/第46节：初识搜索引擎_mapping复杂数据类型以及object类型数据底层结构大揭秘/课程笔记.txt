@@ -1,16 +1,16 @@
-课程大纲
+璇剧▼澶х翰
 
-1、multivalue field
+1銆乵ultivalue field
 
 { "tags": [ "tag1", "tag2" ]}
 
-建立索引时与string是一样的，数据类型不能混
+寤虹珛绱㈠紩鏃朵笌string鏄竴鏍风殑锛屾暟鎹被鍨嬩笉鑳芥贩
 
-2、empty field
+2銆乪mpty field
 
-null，[]，[null]
+null锛孾]锛孾null]
 
-3、object field
+3銆乷bject field
 
 PUT /company/employee/1
 {
@@ -24,7 +24,7 @@ PUT /company/employee/1
   "join_date": "2017-01-01"
 }
 
-address：object类型
+address锛歰bject绫诲瀷
 
 {
   "company": {

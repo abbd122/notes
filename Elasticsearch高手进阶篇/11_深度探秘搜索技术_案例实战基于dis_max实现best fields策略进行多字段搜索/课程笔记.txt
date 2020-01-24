@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢ÎªÌû×ÓÊı¾İÔö¼Ócontent×Ö¶Î
+1ã€ä¸ºå¸–å­æ•°æ®å¢åŠ contentå­—æ®µ
 
 POST /forum/article/_bulk
 { "update": { "_id": "1"} }
@@ -14,9 +14,9 @@ POST /forum/article/_bulk
 { "update": { "_id": "5"} }
 { "doc" : {"content" : "spark is best big data solution based on scala ,an programming language similar to java"} }
 
-2¡¢ËÑË÷title»òcontentÖĞ°üº¬java»òsolutionµÄÌû×Ó
+2ã€æœç´¢titleæˆ–contentä¸­åŒ…å«javaæˆ–solutionçš„å¸–å­
 
-ÏÂÃæÕâ¸ö¾ÍÊÇmulti-fieldËÑË÷£¬¶à×Ö¶ÎËÑË÷
+ä¸‹é¢è¿™ä¸ªå°±æ˜¯multi-fieldæœç´¢ï¼Œå¤šå­—æ®µæœç´¢
 
 GET /forum/article/_search
 {
@@ -30,51 +30,51 @@ GET /forum/article/_search
     }
 }
 
-3¡¢½á¹û·ÖÎö
+3ã€ç»“æœåˆ†æ
 
-ÆÚÍûµÄÊÇdoc5£¬½á¹ûÊÇdoc2,doc4ÅÅÔÚÁËÇ°Ãæ
+æœŸæœ›çš„æ˜¯doc5ï¼Œç»“æœæ˜¯doc2,doc4æ’åœ¨äº†å‰é¢
 
-¼ÆËãÃ¿¸ödocumentµÄrelevance score£ºÃ¿¸öqueryµÄ·ÖÊı£¬³ËÒÔmatched queryÊıÁ¿£¬³ıÒÔ×ÜqueryÊıÁ¿
+è®¡ç®—æ¯ä¸ªdocumentçš„relevance scoreï¼šæ¯ä¸ªqueryçš„åˆ†æ•°ï¼Œä¹˜ä»¥matched queryæ•°é‡ï¼Œé™¤ä»¥æ€»queryæ•°é‡
 
-ËãÒ»ÏÂdoc4µÄ·ÖÊı
+ç®—ä¸€ä¸‹doc4çš„åˆ†æ•°
 
-{ "match": { "title": "java solution" }}£¬Õë¶Ôdoc4£¬ÊÇÓĞÒ»¸ö·ÖÊıµÄ
-{ "match": { "content":  "java solution" }}£¬Õë¶Ôdoc4£¬Ò²ÊÇÓĞÒ»¸ö·ÖÊıµÄ
+{ "match": { "title": "java solution" }}ï¼Œé’ˆå¯¹doc4ï¼Œæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„
+{ "match": { "content":  "java solution" }}ï¼Œé’ˆå¯¹doc4ï¼Œä¹Ÿæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„
 
-ËùÒÔÊÇÁ½¸ö·ÖÊı¼ÓÆğÀ´£¬±ÈÈçËµ£¬1.1 + 1.2 = 2.3
-matched queryÊıÁ¿ = 2
-×ÜqueryÊıÁ¿ = 2
+æ‰€ä»¥æ˜¯ä¸¤ä¸ªåˆ†æ•°åŠ èµ·æ¥ï¼Œæ¯”å¦‚è¯´ï¼Œ1.1 + 1.2 = 2.3
+matched queryæ•°é‡ = 2
+æ€»queryæ•°é‡ = 2
 
 2.3 * 2 / 2 = 2.3
 
-ËãÒ»ÏÂdoc5µÄ·ÖÊı
+ç®—ä¸€ä¸‹doc5çš„åˆ†æ•°
 
-{ "match": { "title": "java solution" }}£¬Õë¶Ôdoc5£¬ÊÇÃ»ÓĞ·ÖÊıµÄ
-{ "match": { "content":  "java solution" }}£¬Õë¶Ôdoc5£¬ÊÇÓĞÒ»¸ö·ÖÊıµÄ
+{ "match": { "title": "java solution" }}ï¼Œé’ˆå¯¹doc5ï¼Œæ˜¯æ²¡æœ‰åˆ†æ•°çš„
+{ "match": { "content":  "java solution" }}ï¼Œé’ˆå¯¹doc5ï¼Œæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„
 
-ËùÒÔËµ£¬Ö»ÓĞÒ»¸öqueryÊÇÓĞ·ÖÊıµÄ£¬±ÈÈç2.3
-matched queryÊıÁ¿ = 1
-×ÜqueryÊıÁ¿ = 2
+æ‰€ä»¥è¯´ï¼Œåªæœ‰ä¸€ä¸ªqueryæ˜¯æœ‰åˆ†æ•°çš„ï¼Œæ¯”å¦‚2.3
+matched queryæ•°é‡ = 1
+æ€»queryæ•°é‡ = 2
 
 2.3 * 1 / 2 = 1.15
 
-doc5µÄ·ÖÊı = 1.15 < doc4µÄ·ÖÊı = 2.3
+doc5çš„åˆ†æ•° = 1.15 < doc4çš„åˆ†æ•° = 2.3
 
-4¡¢best fields²ßÂÔ£¬dis_max
+4ã€best fieldsç­–ç•¥ï¼Œdis_max
 
-best fields²ßÂÔ£¬¾ÍÊÇËµ£¬ËÑË÷µ½µÄ½á¹û£¬Ó¦¸ÃÊÇÄ³Ò»¸öfieldÖĞÆ¥Åäµ½ÁË¾¡¿ÉÄÜ¶àµÄ¹Ø¼ü´Ê£¬±»ÅÅÔÚÇ°Ãæ£»¶ø²»ÊÇ¾¡¿ÉÄÜ¶àµÄfieldÆ¥Åäµ½ÁËÉÙÊıµÄ¹Ø¼ü´Ê£¬ÅÅÔÚÁËÇ°Ãæ
+best fieldsç­–ç•¥ï¼Œå°±æ˜¯è¯´ï¼Œæœç´¢åˆ°çš„ç»“æœï¼Œåº”è¯¥æ˜¯æŸä¸€ä¸ªfieldä¸­åŒ¹é…åˆ°äº†å°½å¯èƒ½å¤šçš„å…³é”®è¯ï¼Œè¢«æ’åœ¨å‰é¢ï¼›è€Œä¸æ˜¯å°½å¯èƒ½å¤šçš„fieldåŒ¹é…åˆ°äº†å°‘æ•°çš„å…³é”®è¯ï¼Œæ’åœ¨äº†å‰é¢
 
-dis_maxÓï·¨£¬Ö±½ÓÈ¡¶à¸öqueryÖĞ£¬·ÖÊı×î¸ßµÄÄÇÒ»¸öqueryµÄ·ÖÊı¼´¿É
+dis_maxè¯­æ³•ï¼Œç›´æ¥å–å¤šä¸ªqueryä¸­ï¼Œåˆ†æ•°æœ€é«˜çš„é‚£ä¸€ä¸ªqueryçš„åˆ†æ•°å³å¯
 
-{ "match": { "title": "java solution" }}£¬Õë¶Ôdoc4£¬ÊÇÓĞÒ»¸ö·ÖÊıµÄ£¬1.1
-{ "match": { "content":  "java solution" }}£¬Õë¶Ôdoc4£¬Ò²ÊÇÓĞÒ»¸ö·ÖÊıµÄ£¬1.2
-È¡×î´ó·ÖÊı£¬1.2
+{ "match": { "title": "java solution" }}ï¼Œé’ˆå¯¹doc4ï¼Œæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„ï¼Œ1.1
+{ "match": { "content":  "java solution" }}ï¼Œé’ˆå¯¹doc4ï¼Œä¹Ÿæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„ï¼Œ1.2
+å–æœ€å¤§åˆ†æ•°ï¼Œ1.2
 
-{ "match": { "title": "java solution" }}£¬Õë¶Ôdoc5£¬ÊÇÃ»ÓĞ·ÖÊıµÄ
-{ "match": { "content":  "java solution" }}£¬Õë¶Ôdoc5£¬ÊÇÓĞÒ»¸ö·ÖÊıµÄ£¬2.3
-È¡×î´ó·ÖÊı£¬2.3
+{ "match": { "title": "java solution" }}ï¼Œé’ˆå¯¹doc5ï¼Œæ˜¯æ²¡æœ‰åˆ†æ•°çš„
+{ "match": { "content":  "java solution" }}ï¼Œé’ˆå¯¹doc5ï¼Œæ˜¯æœ‰ä¸€ä¸ªåˆ†æ•°çš„ï¼Œ2.3
+å–æœ€å¤§åˆ†æ•°ï¼Œ2.3
 
-È»ºódoc4µÄ·ÖÊı = 1.2 < doc5µÄ·ÖÊı = 2.3£¬ËùÒÔdoc5¾Í¿ÉÒÔÅÅÔÚ¸üÇ°ÃæµÄµØ·½£¬·ûºÏÎÒÃÇµÄĞèÒª
+ç„¶ådoc4çš„åˆ†æ•° = 1.2 < doc5çš„åˆ†æ•° = 2.3ï¼Œæ‰€ä»¥doc5å°±å¯ä»¥æ’åœ¨æ›´å‰é¢çš„åœ°æ–¹ï¼Œç¬¦åˆæˆ‘ä»¬çš„éœ€è¦
 
 GET /forum/article/_search
 {

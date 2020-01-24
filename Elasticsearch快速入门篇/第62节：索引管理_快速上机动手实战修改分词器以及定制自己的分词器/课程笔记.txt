@@ -1,17 +1,17 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Ä¬ÈÏµÄ·Ö´ÊÆ÷
+1ã€é»˜è®¤çš„åˆ†è¯å™¨
 
 standard
 
-standard tokenizer£ºÒÔµ¥´Ê±ß½ç½øĞĞÇĞ·Ö
-standard token filter£ºÊ²Ã´¶¼²»×ö
-lowercase token filter£º½«ËùÓĞ×ÖÄ¸×ª»»ÎªĞ¡Ğ´
-stop token filer£¨Ä¬ÈÏ±»½ûÓÃ£©£ºÒÆ³ıÍ£ÓÃ´Ê£¬±ÈÈça the itµÈµÈ
+standard tokenizerï¼šä»¥å•è¯è¾¹ç•Œè¿›è¡Œåˆ‡åˆ†
+standard token filterï¼šä»€ä¹ˆéƒ½ä¸åš
+lowercase token filterï¼šå°†æ‰€æœ‰å­—æ¯è½¬æ¢ä¸ºå°å†™
+stop token filerï¼ˆé»˜è®¤è¢«ç¦ç”¨ï¼‰ï¼šç§»é™¤åœç”¨è¯ï¼Œæ¯”å¦‚a the itç­‰ç­‰
 
-2¡¢ĞŞ¸Ä·Ö´ÊÆ÷µÄÉèÖÃ
+2ã€ä¿®æ”¹åˆ†è¯å™¨çš„è®¾ç½®
 
-ÆôÓÃenglishÍ£ÓÃ´Êtoken filter
+å¯ç”¨englishåœç”¨è¯token filter
 
 PUT /my_index
 {
@@ -39,7 +39,7 @@ GET /my_index/_analyze
   "text":"a dog is in the house"
 }
 
-3¡¢¶¨ÖÆ»¯×Ô¼ºµÄ·Ö´ÊÆ÷
+3ã€å®šåˆ¶åŒ–è‡ªå·±çš„åˆ†è¯å™¨
 
 PUT /my_index
 {

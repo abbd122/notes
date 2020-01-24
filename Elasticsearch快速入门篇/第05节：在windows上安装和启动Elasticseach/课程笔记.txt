@@ -1,12 +1,12 @@
-1¡¢°²×°JDK£¬ÖÁÉÙ1.8.0_73ÒÔÉÏ°æ±¾£¬java -version
-2¡¢ÏÂÔØºÍ½âÑ¹ËõElasticsearch°²×°°ü£¬Ä¿Â¼½á¹¹
-3¡¢Æô¶¯Elasticsearch£ºbin\elasticsearch.bat£¬es±¾ÉíÌØµãÖ®Ò»¾ÍÊÇ¿ªÏä¼´ÓÃ£¬Èç¹ûÊÇÖĞĞ¡ĞÍÓ¦ÓÃ£¬Êı¾İÁ¿ÉÙ£¬²Ù×÷²»ÊÇºÜ¸´ÔÓ£¬Ö±½ÓÆô¶¯¾Í¿ÉÒÔÓÃÁË
+1ã€å®‰è£…JDKï¼Œè‡³å°‘1.8.0_73ä»¥ä¸Šç‰ˆæœ¬ï¼Œjava -version
+2ã€ä¸‹è½½å’Œè§£å‹ç¼©Elasticsearchå®‰è£…åŒ…ï¼Œç›®å½•ç»“æ„
+3ã€å¯åŠ¨Elasticsearchï¼šbin\elasticsearch.batï¼Œesæœ¬èº«ç‰¹ç‚¹ä¹‹ä¸€å°±æ˜¯å¼€ç®±å³ç”¨ï¼Œå¦‚æœæ˜¯ä¸­å°å‹åº”ç”¨ï¼Œæ•°æ®é‡å°‘ï¼Œæ“ä½œä¸æ˜¯å¾ˆå¤æ‚ï¼Œç›´æ¥å¯åŠ¨å°±å¯ä»¥ç”¨äº†
 
-4¡¢¼ì²éESÊÇ·ñÆô¶¯³É¹¦£ºhttp://localhost:9200/?pretty
+4ã€æ£€æŸ¥ESæ˜¯å¦å¯åŠ¨æˆåŠŸï¼šhttp://localhost:9200/?pretty
 
-name: nodeÃû³Æ
-cluster_name: ¼¯ÈºÃû³Æ£¨Ä¬ÈÏµÄ¼¯ÈºÃû³Æ¾ÍÊÇelasticsearch£©
-version.number: 5.2.0£¬es°æ±¾ºÅ
+name: nodeåç§°
+cluster_name: é›†ç¾¤åç§°ï¼ˆé»˜è®¤çš„é›†ç¾¤åç§°å°±æ˜¯elasticsearchï¼‰
+version.number: 5.2.0ï¼Œesç‰ˆæœ¬å·
 
 {
   "name" : "4onsTYV",
@@ -22,8 +22,8 @@ version.number: 5.2.0£¬es°æ±¾ºÅ
   "tagline" : "You Know, for Search"
 }
 
-5¡¢ĞŞ¸Ä¼¯ÈºÃû³Æ£ºelasticsearch.yml
-6¡¢ÏÂÔØºÍ½âÑ¹ËõKibana°²×°°ü£¬Ê¹ÓÃÀïÃæµÄ¿ª·¢½çÃæ£¬È¥²Ù×÷elasticsearch£¬×÷ÎªÎÒÃÇÑ§Ï°esÖªÊ¶µãµÄÒ»¸öÖ÷ÒªµÄ½çÃæÈë¿Ú
-7¡¢Æô¶¯Kibana£ºbin\kibana.bat
-8¡¢½øÈëDev Tools½çÃæ
-9¡¢GET _cluster/health
+5ã€ä¿®æ”¹é›†ç¾¤åç§°ï¼šelasticsearch.yml
+6ã€ä¸‹è½½å’Œè§£å‹ç¼©Kibanaå®‰è£…åŒ…ï¼Œä½¿ç”¨é‡Œé¢çš„å¼€å‘ç•Œé¢ï¼Œå»æ“ä½œelasticsearchï¼Œä½œä¸ºæˆ‘ä»¬å­¦ä¹ esçŸ¥è¯†ç‚¹çš„ä¸€ä¸ªä¸»è¦çš„ç•Œé¢å…¥å£
+7ã€å¯åŠ¨Kibanaï¼šbin\kibana.bat
+8ã€è¿›å…¥Dev Toolsç•Œé¢
+9ã€GET _cluster/health

@@ -1,13 +1,13 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢ÆÕÍ¨matchÈçºÎ×ª»»Îªterm+should
+1ã€æ™®é€šmatchå¦‚ä½•è½¬æ¢ä¸ºterm+should
 
 {
     "match": { "title": "java elasticsearch"}
 }
 
-Ê¹ÓÃÖîÈçÉÏÃæµÄmatch query½øÐÐ¶àÖµËÑË÷µÄÊ±ºò£¬es»áÔÚµ×²ã×Ô¶¯½«Õâ¸ömatch query×ª»»ÎªboolµÄÓï·¨
-bool should£¬Ö¸¶¨¶à¸öËÑË÷´Ê£¬Í¬Ê±Ê¹ÓÃterm query
+ä½¿ç”¨è¯¸å¦‚ä¸Šé¢çš„match queryè¿›è¡Œå¤šå€¼æœç´¢çš„æ—¶å€™ï¼Œesä¼šåœ¨åº•å±‚è‡ªåŠ¨å°†è¿™ä¸ªmatch queryè½¬æ¢ä¸ºboolçš„è¯­æ³•
+bool shouldï¼ŒæŒ‡å®šå¤šä¸ªæœç´¢è¯ï¼ŒåŒæ—¶ä½¿ç”¨term query
 
 {
   "bool": {
@@ -18,7 +18,7 @@ bool should£¬Ö¸¶¨¶à¸öËÑË÷´Ê£¬Í¬Ê±Ê¹ÓÃterm query
   }
 }
 
-2¡¢and matchÈçºÎ×ª»»Îªterm+must
+2ã€and matchå¦‚ä½•è½¬æ¢ä¸ºterm+must
 
 {
     "match": {
@@ -38,7 +38,7 @@ bool should£¬Ö¸¶¨¶à¸öËÑË÷´Ê£¬Í¬Ê±Ê¹ÓÃterm query
   }
 }
 
-3¡¢minimum_should_matchÈçºÎ×ª»»
+3ã€minimum_should_matchå¦‚ä½•è½¬æ¢
 
 {
     "match": {
@@ -61,6 +61,6 @@ bool should£¬Ö¸¶¨¶à¸öËÑË÷´Ê£¬Í¬Ê±Ê¹ÓÃterm query
   }
 }
 
-ÉÏÒ»½²£¬ÎªÉ¶Òª½²½âÁ½ÖÖÊµÏÖmulti-valueËÑË÷µÄ·½Ê½ÄØ£¿Êµ¼ÊÉÏ£¬¾ÍÊÇ¸øÕâÒ»½²½øÐÐÆÌµæµÄ¡£match query --> bool + term¡£
+ä¸Šä¸€è®²ï¼Œä¸ºå•¥è¦è®²è§£ä¸¤ç§å®žçŽ°multi-valueæœç´¢çš„æ–¹å¼å‘¢ï¼Ÿå®žé™…ä¸Šï¼Œå°±æ˜¯ç»™è¿™ä¸€è®²è¿›è¡Œé“ºåž«çš„ã€‚match query --> bool + termã€‚
 
 

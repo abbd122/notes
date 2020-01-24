@@ -1,14 +1,14 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢ÈçºÎ½¨Á¢Ë÷Òı
+1ã€å¦‚ä½•å»ºç«‹ç´¢å¼•
 
 analyzed
 not_analyzed
 no
 
-2¡¢ĞŞ¸Ämapping
+2ã€ä¿®æ”¹mapping
 
-Ö»ÄÜ´´½¨indexÊ±ÊÖ¶¯½¨Á¢mapping£¬»òÕßĞÂÔöfield mapping£¬µ«ÊÇ²»ÄÜupdate field mapping
+åªèƒ½åˆ›å»ºindexæ—¶æ‰‹åŠ¨å»ºç«‹mappingï¼Œæˆ–è€…æ–°å¢field mappingï¼Œä½†æ˜¯ä¸èƒ½update field mapping
 
 PUT /website
 {
@@ -78,7 +78,7 @@ PUT /website/_mapping/article
   }
 }
 
-3¡¢²âÊÔmapping
+3ã€æµ‹è¯•mapping
 
 GET /website/_analyze
 {

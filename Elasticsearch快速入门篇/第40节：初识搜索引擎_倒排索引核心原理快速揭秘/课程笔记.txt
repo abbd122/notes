@@ -1,9 +1,9 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-doc1£ºI really liked my small dogs, and I think my mom also liked them.
-doc2£ºHe never liked any dogs, so I hope that my mom will not expect me to liked him.
+doc1ï¼šI really liked my small dogs, and I think my mom also liked them.
+doc2ï¼šHe never liked any dogs, so I hope that my mom will not expect me to liked him.
 
-·Ö´Ê£¬³õ²½µÄµ¹ÅÅË÷ÒıµÄ½¨Á¢
+åˆ†è¯ï¼Œåˆæ­¥çš„å€’æ’ç´¢å¼•çš„å»ºç«‹
 
 word		doc1			doc2
 
@@ -31,29 +31,29 @@ me					*
 to					*
 him					*
 
-ÑİÊ¾ÁËÒ»ÏÂµ¹ÅÅË÷Òı×î¼òµ¥µÄ½¨Á¢µÄÒ»¸ö¹ı³Ì
+æ¼”ç¤ºäº†ä¸€ä¸‹å€’æ’ç´¢å¼•æœ€ç®€å•çš„å»ºç«‹çš„ä¸€ä¸ªè¿‡ç¨‹
 
-ËÑË÷
+æœç´¢
 
-mother like little dog£¬²»¿ÉÄÜÓĞÈÎºÎ½á¹û
+mother like little dogï¼Œä¸å¯èƒ½æœ‰ä»»ä½•ç»“æœ
 
 mother
 like
 little
 dog
 
-Õâ¸öÊÇ²»ÊÇÎÒÃÇÏëÒªµÄËÑË÷½á¹û£¿£¿£¿¾ø¶Ô²»ÊÇ£¬ÒòÎªÔÚÎÒÃÇ¿´À´£¬motherºÍmomÓĞÇø±ğÂğ£¿Í¬Òå´Ê£¬¶¼ÊÇÂèÂèµÄÒâË¼¡£likeºÍlikedÓĞÇø±ğÂğ£¿Ã»ÓĞ£¬¶¼ÊÇÏ²»¶µÄÒâË¼£¬Ö»²»¹ıÒ»¸öÊÇÏÖÔÚÊ±£¬Ò»¸öÊÇ¹ıÈ¥Ê±¡£littleºÍsmallÓĞÇø±ğÂğ£¿Í¬Òå´Ê£¬¶¼ÊÇĞ¡Ğ¡µÄ¡£dogºÍdogsÓĞÇø±ğÂğ£¿¹·£¬Ö»²»¹ıÒ»¸öÊÇµ¥Êı£¬Ò»¸öÊÇ¸´Êı¡£
+è¿™ä¸ªæ˜¯ä¸æ˜¯æˆ‘ä»¬æƒ³è¦çš„æœç´¢ç»“æœï¼Ÿï¼Ÿï¼Ÿç»å¯¹ä¸æ˜¯ï¼Œå› ä¸ºåœ¨æˆ‘ä»¬çœ‹æ¥ï¼Œmotherå’Œmomæœ‰åŒºåˆ«å—ï¼ŸåŒä¹‰è¯ï¼Œéƒ½æ˜¯å¦ˆå¦ˆçš„æ„æ€ã€‚likeå’Œlikedæœ‰åŒºåˆ«å—ï¼Ÿæ²¡æœ‰ï¼Œéƒ½æ˜¯å–œæ¬¢çš„æ„æ€ï¼Œåªä¸è¿‡ä¸€ä¸ªæ˜¯ç°åœ¨æ—¶ï¼Œä¸€ä¸ªæ˜¯è¿‡å»æ—¶ã€‚littleå’Œsmallæœ‰åŒºåˆ«å—ï¼ŸåŒä¹‰è¯ï¼Œéƒ½æ˜¯å°å°çš„ã€‚dogå’Œdogsæœ‰åŒºåˆ«å—ï¼Ÿç‹—ï¼Œåªä¸è¿‡ä¸€ä¸ªæ˜¯å•æ•°ï¼Œä¸€ä¸ªæ˜¯å¤æ•°ã€‚
 
-normalization£¬½¨Á¢µ¹ÅÅË÷ÒıµÄÊ±ºò£¬»áÖ´ĞĞÒ»¸ö²Ù×÷£¬Ò²¾ÍÊÇËµ¶Ô²ğ·Ö³öµÄ¸÷¸öµ¥´Ê½øĞĞÏàÓ¦µÄ´¦Àí£¬ÒÔÌáÉıºóÃæËÑË÷µÄÊ±ºòÄÜ¹»ËÑË÷µ½Ïà¹ØÁªµÄÎÄµµµÄ¸ÅÂÊ
+normalizationï¼Œå»ºç«‹å€’æ’ç´¢å¼•çš„æ—¶å€™ï¼Œä¼šæ‰§è¡Œä¸€ä¸ªæ“ä½œï¼Œä¹Ÿå°±æ˜¯è¯´å¯¹æ‹†åˆ†å‡ºçš„å„ä¸ªå•è¯è¿›è¡Œç›¸åº”çš„å¤„ç†ï¼Œä»¥æå‡åé¢æœç´¢çš„æ—¶å€™èƒ½å¤Ÿæœç´¢åˆ°ç›¸å…³è”çš„æ–‡æ¡£çš„æ¦‚ç‡
 
-Ê±Ì¬µÄ×ª»»£¬µ¥¸´ÊıµÄ×ª»»£¬Í¬Òå´ÊµÄ×ª»»£¬´óĞ¡Ğ´µÄ×ª»»
+æ—¶æ€çš„è½¬æ¢ï¼Œå•å¤æ•°çš„è½¬æ¢ï¼ŒåŒä¹‰è¯çš„è½¬æ¢ï¼Œå¤§å°å†™çš„è½¬æ¢
 
-mom ¡ª> mother
-liked ¡ª> like
-small ¡ª> little
-dogs ¡ª> dog
+mom â€”> mother
+liked â€”> like
+small â€”> little
+dogs â€”> dog
 
-ÖØĞÂ½¨Á¢µ¹ÅÅË÷Òı£¬¼ÓÈënormalization£¬ÔÙ´ÎÓÃmother liked little dogËÑË÷£¬¾Í¿ÉÒÔËÑË÷µ½ÁË
+é‡æ–°å»ºç«‹å€’æ’ç´¢å¼•ï¼ŒåŠ å…¥normalizationï¼Œå†æ¬¡ç”¨mother liked little dogæœç´¢ï¼Œå°±å¯ä»¥æœç´¢åˆ°äº†
 
 word		doc1			doc2
 
@@ -81,17 +81,17 @@ me					*
 to					*
 him					*
 
-mother like little dog£¬·Ö´Ê£¬normalization
+mother like little dogï¼Œåˆ†è¯ï¼Œnormalization
 
 mother	--> mom
 like	--> like
 little	--> little
 dog	--> dog
 
-doc1ºÍdoc2¶¼»áËÑË÷³öÀ´
+doc1å’Œdoc2éƒ½ä¼šæœç´¢å‡ºæ¥
 
-doc1£ºI really liked my small dogs, and I think my mom also liked them.
-doc2£ºHe never liked any dogs, so I hope that my mom will not expect me to liked him.
+doc1ï¼šI really liked my small dogs, and I think my mom also liked them.
+doc2ï¼šHe never liked any dogs, so I hope that my mom will not expect me to liked him.
 
 
 

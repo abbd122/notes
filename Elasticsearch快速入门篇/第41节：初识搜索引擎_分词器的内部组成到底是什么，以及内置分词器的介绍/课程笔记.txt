@@ -1,24 +1,24 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Ê²Ã´ÊÇ·Ö´ÊÆ÷
+1ã€ä»€ä¹ˆæ˜¯åˆ†è¯å™¨
 
-ÇĞ·Ö´ÊÓï£¬normalization£¨ÌáÉırecallÕÙ»ØÂÊ£©
+åˆ‡åˆ†è¯è¯­ï¼Œnormalizationï¼ˆæå‡recallå¬å›ç‡ï¼‰
 
-¸øÄãÒ»¶Î¾ä×Ó£¬È»ºó½«Õâ¶Î¾ä×Ó²ğ·Ö³ÉÒ»¸öÒ»¸öµÄµ¥¸öµÄµ¥´Ê£¬Í¬Ê±¶ÔÃ¿¸öµ¥´Ê½øĞĞnormalization£¨Ê±Ì¬×ª»»£¬µ¥¸´Êı×ª»»£©£¬·Ö´ÉÆ÷
-recall£¬ÕÙ»ØÂÊ£ºËÑË÷µÄÊ±ºò£¬Ôö¼ÓÄÜ¹»ËÑË÷µ½µÄ½á¹ûµÄÊıÁ¿
+ç»™ä½ ä¸€æ®µå¥å­ï¼Œç„¶åå°†è¿™æ®µå¥å­æ‹†åˆ†æˆä¸€ä¸ªä¸€ä¸ªçš„å•ä¸ªçš„å•è¯ï¼ŒåŒæ—¶å¯¹æ¯ä¸ªå•è¯è¿›è¡Œnormalizationï¼ˆæ—¶æ€è½¬æ¢ï¼Œå•å¤æ•°è½¬æ¢ï¼‰ï¼Œåˆ†ç“·å™¨
+recallï¼Œå¬å›ç‡ï¼šæœç´¢çš„æ—¶å€™ï¼Œå¢åŠ èƒ½å¤Ÿæœç´¢åˆ°çš„ç»“æœçš„æ•°é‡
 
-character filter£ºÔÚÒ»¶ÎÎÄ±¾½øĞĞ·Ö´ÊÖ®Ç°£¬ÏÈ½øĞĞÔ¤´¦Àí£¬±ÈÈçËµ×î³£¼ûµÄ¾ÍÊÇ£¬¹ıÂËhtml±êÇ©£¨<span>hello<span> --> hello£©£¬& --> and£¨I&you --> I and you£©
-tokenizer£º·Ö´Ê£¬hello you and me --> hello, you, and, me
-token filter£ºlowercase£¬stop word£¬synonymom£¬dogs --> dog£¬liked --> like£¬Tom --> tom£¬a/the/an --> ¸Éµô£¬mother --> mom£¬small --> little
+character filterï¼šåœ¨ä¸€æ®µæ–‡æœ¬è¿›è¡Œåˆ†è¯ä¹‹å‰ï¼Œå…ˆè¿›è¡Œé¢„å¤„ç†ï¼Œæ¯”å¦‚è¯´æœ€å¸¸è§çš„å°±æ˜¯ï¼Œè¿‡æ»¤htmlæ ‡ç­¾ï¼ˆ<span>hello<span> --> helloï¼‰ï¼Œ& --> andï¼ˆI&you --> I and youï¼‰
+tokenizerï¼šåˆ†è¯ï¼Œhello you and me --> hello, you, and, me
+token filterï¼šlowercaseï¼Œstop wordï¼Œsynonymomï¼Œdogs --> dogï¼Œliked --> likeï¼ŒTom --> tomï¼Œa/the/an --> å¹²æ‰ï¼Œmother --> momï¼Œsmall --> little
 
-Ò»¸ö·Ö´ÊÆ÷£¬ºÜÖØÒª£¬½«Ò»¶ÎÎÄ±¾½øĞĞ¸÷ÖÖ´¦Àí£¬×îºó´¦ÀíºÃµÄ½á¹û²Å»áÄÃÈ¥½¨Á¢µ¹ÅÅË÷Òı
+ä¸€ä¸ªåˆ†è¯å™¨ï¼Œå¾ˆé‡è¦ï¼Œå°†ä¸€æ®µæ–‡æœ¬è¿›è¡Œå„ç§å¤„ç†ï¼Œæœ€åå¤„ç†å¥½çš„ç»“æœæ‰ä¼šæ‹¿å»å»ºç«‹å€’æ’ç´¢å¼•
 
-2¡¢ÄÚÖÃ·Ö´ÊÆ÷µÄ½éÉÜ
+2ã€å†…ç½®åˆ†è¯å™¨çš„ä»‹ç»
 
 Set the shape to semi-transparent by calling set_trans(5)
 
-standard analyzer£ºset, the, shape, to, semi, transparent, by, calling, set_trans, 5£¨Ä¬ÈÏµÄÊÇstandard£©
-simple analyzer£ºset, the, shape, to, semi, transparent, by, calling, set, trans
-whitespace analyzer£ºSet, the, shape, to, semi-transparent, by, calling, set_trans(5)
-language analyzer£¨ÌØ¶¨µÄÓïÑÔµÄ·Ö´ÊÆ÷£¬±ÈÈçËµ£¬english£¬Ó¢Óï·Ö´ÊÆ÷£©£ºset, shape, semi, transpar, call, set_tran, 5
+standard analyzerï¼šset, the, shape, to, semi, transparent, by, calling, set_trans, 5ï¼ˆé»˜è®¤çš„æ˜¯standardï¼‰
+simple analyzerï¼šset, the, shape, to, semi, transparent, by, calling, set, trans
+whitespace analyzerï¼šSet, the, shape, to, semi-transparent, by, calling, set_trans(5)
+language analyzerï¼ˆç‰¹å®šçš„è¯­è¨€çš„åˆ†è¯å™¨ï¼Œæ¯”å¦‚è¯´ï¼Œenglishï¼Œè‹±è¯­åˆ†è¯å™¨ï¼‰ï¼šset, shape, semi, transpar, call, set_tran, 5
 

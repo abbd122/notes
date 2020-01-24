@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-£¨1£©¿Í»§¶ËÑ¡ÔñÒ»¸önode·¢ËÍÇëÇó¹ıÈ¥£¬Õâ¸önode¾ÍÊÇcoordinating node£¨Ğ­µ÷½Úµã£©
-£¨2£©coordinating node£¬¶Ôdocument½øĞĞÂ·ÓÉ£¬½«ÇëÇó×ª·¢¸ø¶ÔÓ¦µÄnode£¨ÓĞprimary shard£©
-£¨3£©Êµ¼ÊµÄnodeÉÏµÄprimary shard´¦ÀíÇëÇó£¬È»ºó½«Êı¾İÍ¬²½µ½replica node
-£¨4£©coordinating node£¬Èç¹û·¢ÏÖprimary nodeºÍËùÓĞreplica node¶¼¸ã¶¨Ö®ºó£¬¾Í·µ»ØÏìÓ¦½á¹û¸ø¿Í»§¶Ë
+ï¼ˆ1ï¼‰å®¢æˆ·ç«¯é€‰æ‹©ä¸€ä¸ªnodeå‘é€è¯·æ±‚è¿‡å»ï¼Œè¿™ä¸ªnodeå°±æ˜¯coordinating nodeï¼ˆåè°ƒèŠ‚ç‚¹ï¼‰
+ï¼ˆ2ï¼‰coordinating nodeï¼Œå¯¹documentè¿›è¡Œè·¯ç”±ï¼Œå°†è¯·æ±‚è½¬å‘ç»™å¯¹åº”çš„nodeï¼ˆæœ‰primary shardï¼‰
+ï¼ˆ3ï¼‰å®é™…çš„nodeä¸Šçš„primary shardå¤„ç†è¯·æ±‚ï¼Œç„¶åå°†æ•°æ®åŒæ­¥åˆ°replica node
+ï¼ˆ4ï¼‰coordinating nodeï¼Œå¦‚æœå‘ç°primary nodeå’Œæ‰€æœ‰replica nodeéƒ½æå®šä¹‹åï¼Œå°±è¿”å›å“åº”ç»“æœç»™å®¢æˆ·ç«¯

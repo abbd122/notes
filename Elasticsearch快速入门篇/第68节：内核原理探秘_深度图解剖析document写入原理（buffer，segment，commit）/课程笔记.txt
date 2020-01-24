@@ -1,11 +1,11 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-£¨1£©Êı¾İĞ´Èëbuffer
-£¨2£©commit point
-£¨3£©bufferÖĞµÄÊı¾İĞ´ÈëĞÂµÄindex segment
-£¨4£©µÈ´ıÔÚos cacheÖĞµÄindex segment±»fsyncÇ¿ÖÆË¢µ½´ÅÅÌÉÏ
-£¨5£©ĞÂµÄindex sgement±»´ò¿ª£¬¹©searchÊ¹ÓÃ
-£¨6£©buffer±»Çå¿Õ
+ï¼ˆ1ï¼‰æ•°æ®å†™å…¥buffer
+ï¼ˆ2ï¼‰commit point
+ï¼ˆ3ï¼‰bufferä¸­çš„æ•°æ®å†™å…¥æ–°çš„index segment
+ï¼ˆ4ï¼‰ç­‰å¾…åœ¨os cacheä¸­çš„index segmentè¢«fsyncå¼ºåˆ¶åˆ·åˆ°ç£ç›˜ä¸Š
+ï¼ˆ5ï¼‰æ–°çš„index sgementè¢«æ‰“å¼€ï¼Œä¾›searchä½¿ç”¨
+ï¼ˆ6ï¼‰bufferè¢«æ¸…ç©º
 
-Ã¿´Îcommit pointÊ±£¬»áÓĞÒ»¸ö.delÎÄ¼ş£¬±ê¼ÇÁËÄÄĞ©segmentÖĞµÄÄÄĞ©document±»±ê¼ÇÎªdeletedÁË
-ËÑË÷µÄÊ±ºò£¬»áÒÀ´Î²éÑ¯ËùÓĞµÄsegment£¬´Ó¾ÉµÄµ½ĞÂµÄ£¬±ÈÈç±»ĞŞ¸Ä¹ıµÄdocument£¬ÔÚ¾ÉµÄsegmentÖĞ£¬»á±ê¼ÇÎªdeleted£¬ÔÚĞÂµÄsegmentÖĞ»áÓĞÆäĞÂµÄÊı¾İ
+æ¯æ¬¡commit pointæ—¶ï¼Œä¼šæœ‰ä¸€ä¸ª.delæ–‡ä»¶ï¼Œæ ‡è®°äº†å“ªäº›segmentä¸­çš„å“ªäº›documentè¢«æ ‡è®°ä¸ºdeletedäº†
+æœç´¢çš„æ—¶å€™ï¼Œä¼šä¾æ¬¡æŸ¥è¯¢æ‰€æœ‰çš„segmentï¼Œä»æ—§çš„åˆ°æ–°çš„ï¼Œæ¯”å¦‚è¢«ä¿®æ”¹è¿‡çš„documentï¼Œåœ¨æ—§çš„segmentä¸­ï¼Œä¼šæ ‡è®°ä¸ºdeletedï¼Œåœ¨æ–°çš„segmentä¸­ä¼šæœ‰å…¶æ–°çš„æ•°æ®

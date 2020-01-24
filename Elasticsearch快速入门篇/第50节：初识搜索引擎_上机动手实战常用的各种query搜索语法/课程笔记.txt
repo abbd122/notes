@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢match all
+1ã€match all
 
 GET /_search
 {
@@ -9,14 +9,14 @@ GET /_search
     }
 }
 
-2¡¢match
+2ã€match
 
 GET /_search
 {
     "query": { "match": { "title": "my elasticsearch article" }}
 }
 
-3¡¢multi match
+3ã€multi match
 
 GET /test_index/test_type/_search
 {
@@ -28,7 +28,7 @@ GET /test_index/test_type/_search
   }
 }
 
-4¡¢range query
+4ã€range query
 
 GET /company/employee/_search 
 {
@@ -41,7 +41,7 @@ GET /company/employee/_search
   }
 }
 
-5¡¢term query
+5ã€term query
 
 GET /test_index/test_type/_search 
 {
@@ -52,13 +52,13 @@ GET /test_index/test_type/_search
   }
 }
 
-6¡¢terms query
+6ã€terms query
 
 GET /_search
 {
     "query": { "terms": { "tag": [ "search", "full_text", "nosql" ] }}
 }
 
-7¡¢exist query£¨2.xÖĞµÄ²éÑ¯£¬ÏÖÔÚÒÑ¾­²»Ìá¹©ÁË£©
+7ã€exist queryï¼ˆ2.xä¸­çš„æŸ¥è¯¢ï¼Œç°åœ¨å·²ç»ä¸æä¾›äº†ï¼‰
 
 

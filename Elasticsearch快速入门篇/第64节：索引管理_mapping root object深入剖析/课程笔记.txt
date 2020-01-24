@@ -1,8 +1,8 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢root object
+1ã€root object
 
-¾ÍÊÇÄ³¸ötype¶ÔÓ¦µÄmapping json£¬°üÀ¨ÁËproperties£¬metadata£¨_id£¬_source£¬_type£©£¬settings£¨analyzer£©£¬ÆäËûsettings£¨±ÈÈçinclude_in_all£©
+å°±æ˜¯æŸä¸ªtypeå¯¹åº”çš„mapping jsonï¼ŒåŒ…æ‹¬äº†propertiesï¼Œmetadataï¼ˆ_idï¼Œ_sourceï¼Œ_typeï¼‰ï¼Œsettingsï¼ˆanalyzerï¼‰ï¼Œå…¶ä»–settingsï¼ˆæ¯”å¦‚include_in_allï¼‰
 
 PUT /my_index
 {
@@ -13,9 +13,9 @@ PUT /my_index
   }
 }
 
-2¡¢properties
+2ã€properties
 
-type£¬index£¬analyzer
+typeï¼Œindexï¼Œanalyzer
 
 PUT /my_index/_mapping/my_type
 {
@@ -26,33 +26,33 @@ PUT /my_index/_mapping/my_type
   }
 }
 
-3¡¢_source
+3ã€_source
 
-ºÃ´¦
+å¥½å¤„
 
-£¨1£©²éÑ¯µÄÊ±ºò£¬Ö±½Ó¿ÉÒÔÄÃµ½ÍêÕûµÄdocument£¬²»ĞèÒªÏÈÄÃdocument id£¬ÔÙ·¢ËÍÒ»´ÎÇëÇóÄÃdocument
-£¨2£©partial update»ùÓÚ_sourceÊµÏÖ
-£¨3£©reindexÊ±£¬Ö±½Ó»ùÓÚ_sourceÊµÏÖ£¬²»ĞèÒª´ÓÊı¾İ¿â£¨»òÕßÆäËûÍâ²¿´æ´¢£©²éÑ¯Êı¾İÔÙĞŞ¸Ä
-£¨4£©¿ÉÒÔ»ùÓÚ_source¶¨ÖÆ·µ»Øfield
-£¨5£©debug query¸üÈİÒ×£¬ÒòÎª¿ÉÒÔÖ±½Ó¿´µ½_source
+ï¼ˆ1ï¼‰æŸ¥è¯¢çš„æ—¶å€™ï¼Œç›´æ¥å¯ä»¥æ‹¿åˆ°å®Œæ•´çš„documentï¼Œä¸éœ€è¦å…ˆæ‹¿document idï¼Œå†å‘é€ä¸€æ¬¡è¯·æ±‚æ‹¿document
+ï¼ˆ2ï¼‰partial updateåŸºäº_sourceå®ç°
+ï¼ˆ3ï¼‰reindexæ—¶ï¼Œç›´æ¥åŸºäº_sourceå®ç°ï¼Œä¸éœ€è¦ä»æ•°æ®åº“ï¼ˆæˆ–è€…å…¶ä»–å¤–éƒ¨å­˜å‚¨ï¼‰æŸ¥è¯¢æ•°æ®å†ä¿®æ”¹
+ï¼ˆ4ï¼‰å¯ä»¥åŸºäº_sourceå®šåˆ¶è¿”å›field
+ï¼ˆ5ï¼‰debug queryæ›´å®¹æ˜“ï¼Œå› ä¸ºå¯ä»¥ç›´æ¥çœ‹åˆ°_source
 
-Èç¹û²»ĞèÒªÉÏÊöºÃ´¦£¬¿ÉÒÔ½ûÓÃ_source
+å¦‚æœä¸éœ€è¦ä¸Šè¿°å¥½å¤„ï¼Œå¯ä»¥ç¦ç”¨_source
 
 PUT /my_index/_mapping/my_type2
 {
   "_source": {"enabled": false}
 }
 
-4¡¢_all
+4ã€_all
 
-½«ËùÓĞfield´ò°üÔÚÒ»Æğ£¬×÷ÎªÒ»¸ö_all field£¬½¨Á¢Ë÷Òı¡£Ã»Ö¸¶¨ÈÎºÎfield½øĞĞËÑË÷Ê±£¬¾ÍÊÇÊ¹ÓÃ_all fieldÔÚËÑË÷¡£
+å°†æ‰€æœ‰fieldæ‰“åŒ…åœ¨ä¸€èµ·ï¼Œä½œä¸ºä¸€ä¸ª_all fieldï¼Œå»ºç«‹ç´¢å¼•ã€‚æ²¡æŒ‡å®šä»»ä½•fieldè¿›è¡Œæœç´¢æ—¶ï¼Œå°±æ˜¯ä½¿ç”¨_all fieldåœ¨æœç´¢ã€‚
 
 PUT /my_index/_mapping/my_type3
 {
   "_all": {"enabled": false}
 }
 
-Ò²¿ÉÒÔÔÚfield¼¶±ğÉèÖÃinclude_in_all field£¬ÉèÖÃÊÇ·ñÒª½«fieldµÄÖµ°üº¬ÔÚ_all fieldÖĞ
+ä¹Ÿå¯ä»¥åœ¨fieldçº§åˆ«è®¾ç½®include_in_all fieldï¼Œè®¾ç½®æ˜¯å¦è¦å°†fieldçš„å€¼åŒ…å«åœ¨_all fieldä¸­
 
 PUT /my_index/_mapping/my_type4
 {
@@ -64,9 +64,9 @@ PUT /my_index/_mapping/my_type4
   }
 }
 
-5¡¢±êÊ¶ĞÔmetadata
+5ã€æ ‡è¯†æ€§metadata
 
-_index£¬_type£¬_id
+_indexï¼Œ_typeï¼Œ_id
 
 
 

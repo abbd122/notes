@@ -1,8 +1,8 @@
-Ö®Ç°Á½½Ú¿Î£¬ÎÒ¾õµÃÒÑ¾­ºÜÁË½âÕû¸öesµÄÏà¹Ø¶ÈÆÀ·ÖµÄËã·¨ÁË£¬Ëã·¨Ë¼Ïë£¬TF/IDF£¬vector model£¬boolean model; Êµ¼ÊµÄ¹«Ê½£¬query norm£¬query coordination£¬boost
+ä¹‹å‰ä¸¤èŠ‚è¯¾ï¼Œæˆ‘è§‰å¾—å·²ç»å¾ˆäº†è§£æ•´ä¸ªesçš„ç›¸å…³åº¦è¯„åˆ†çš„ç®—æ³•äº†ï¼Œç®—æ³•æ€æƒ³ï¼ŒTF/IDFï¼Œvector modelï¼Œboolean model; å®é™…çš„å…¬å¼ï¼Œquery normï¼Œquery coordinationï¼Œboost
 
-¶ÔÏà¹Ø¶ÈÆÀ·Ö½øĞĞµ÷½ÚºÍÓÅ»¯µÄ³£¼ûµÄ4ÖÖ·½·¨
+å¯¹ç›¸å…³åº¦è¯„åˆ†è¿›è¡Œè°ƒèŠ‚å’Œä¼˜åŒ–çš„å¸¸è§çš„4ç§æ–¹æ³•
 
-1¡¢query-time boost
+1ã€query-time boost
 
 GET /forum/article/_search
 {
@@ -27,9 +27,9 @@ GET /forum/article/_search
   }
 }
 
-2¡¢ÖØ¹¹²éÑ¯½á¹¹
+2ã€é‡æ„æŸ¥è¯¢ç»“æ„
 
-ÖØ¹¹²éÑ¯½á¹û£¬ÔÚesĞÂ°æ±¾ÖĞ£¬Ó°ÏìÔ½À´Ô½Ğ¡ÁË¡£Ò»°ãÇé¿öÏÂ£¬Ã»Ê²Ã´±ØÒªµÄ»°£¬´ó¼Ò²»ÓÃÒ²ĞĞ¡£
+é‡æ„æŸ¥è¯¢ç»“æœï¼Œåœ¨esæ–°ç‰ˆæœ¬ä¸­ï¼Œå½±å“è¶Šæ¥è¶Šå°äº†ã€‚ä¸€èˆ¬æƒ…å†µä¸‹ï¼Œæ²¡ä»€ä¹ˆå¿…è¦çš„è¯ï¼Œå¤§å®¶ä¸ç”¨ä¹Ÿè¡Œã€‚
 
 GET /forum/article/_search 
 {
@@ -67,11 +67,11 @@ GET /forum/article/_search
   }
 }
 
-3¡¢negative boost
+3ã€negative boost
 
-ËÑË÷°üº¬java£¬²»°üº¬sparkµÄdoc£¬µ«ÊÇÕâÑù×ÓºÜËÀ°å
-ËÑË÷°üº¬java£¬¾¡Á¿²»°üº¬sparkµÄdoc£¬Èç¹û°üº¬ÁËspark£¬²»»áËµÅÅ³ıµôÕâ¸ödoc£¬¶øÊÇËµ½«Õâ¸ödocµÄ·ÖÊı½µµÍ
-°üº¬ÁËnegative termµÄdoc£¬·ÖÊı³ËÒÔnegative boost£¬·ÖÊı½µµÍ
+æœç´¢åŒ…å«javaï¼Œä¸åŒ…å«sparkçš„docï¼Œä½†æ˜¯è¿™æ ·å­å¾ˆæ­»æ¿
+æœç´¢åŒ…å«javaï¼Œå°½é‡ä¸åŒ…å«sparkçš„docï¼Œå¦‚æœåŒ…å«äº†sparkï¼Œä¸ä¼šè¯´æ’é™¤æ‰è¿™ä¸ªdocï¼Œè€Œæ˜¯è¯´å°†è¿™ä¸ªdocçš„åˆ†æ•°é™ä½
+åŒ…å«äº†negative termçš„docï¼Œåˆ†æ•°ä¹˜ä»¥negative boostï¼Œåˆ†æ•°é™ä½
 
 GET /forum/article/_search 
 {
@@ -114,11 +114,11 @@ GET /forum/article/_search
   }
 }
 
-negativeµÄdoc£¬»á³ËÒÔnegative_boost£¬½µµÍ·ÖÊı
+negativeçš„docï¼Œä¼šä¹˜ä»¥negative_boostï¼Œé™ä½åˆ†æ•°
 
-4¡¢constant_score
+4ã€constant_score
 
-Èç¹ûÄãÑ¹¸ù¶ù²»ĞèÒªÏà¹Ø¶ÈÆÀ·Ö£¬Ö±½Ó×ßconstant_score¼Ófilter£¬ËùÓĞµÄdoc·ÖÊı¶¼ÊÇ1£¬Ã»ÓĞÆÀ·ÖµÄ¸ÅÄîÁË
+å¦‚æœä½ å‹æ ¹å„¿ä¸éœ€è¦ç›¸å…³åº¦è¯„åˆ†ï¼Œç›´æ¥èµ°constant_scoreåŠ filterï¼Œæ‰€æœ‰çš„docåˆ†æ•°éƒ½æ˜¯1ï¼Œæ²¡æœ‰è¯„åˆ†çš„æ¦‚å¿µäº†
 
 GET /forum/article/_search 
 {

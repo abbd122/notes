@@ -1,4 +1,4 @@
-课程大纲
+璇剧▼澶х翰
 
 GET /website/article/_search
 {
@@ -43,9 +43,9 @@ GET /website/article/_search
 }
 
 bool
-must，must_not，should，filter
+must锛宮ust_not锛宻hould锛宖ilter
 
-每个子查询都会计算一个document针对它的相关度分数，然后bool综合所有分数，合并为一个分数，当然filter是不会计算分数的
+姣忎釜瀛愭煡璇㈤兘浼氳绠椾竴涓猟ocument閽堝瀹冪殑鐩稿叧搴﹀垎鏁帮紝鐒跺悗bool缁煎悎鎵�鏈夊垎鏁帮紝鍚堝苟涓轰竴涓垎鏁帮紝褰撶劧filter鏄笉浼氳绠楀垎鏁扮殑
 
 {
     "bool": {

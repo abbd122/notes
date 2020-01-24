@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-²åÈë¼¸ÌõÊı¾İ£¬ÈÃes×Ô¶¯ÎªÎÒÃÇ½¨Á¢Ò»¸öË÷Òı
+æ’å…¥å‡ æ¡æ•°æ®ï¼Œè®©esè‡ªåŠ¨ä¸ºæˆ‘ä»¬å»ºç«‹ä¸€ä¸ªç´¢å¼•
 
 PUT /website/article/1
 {
@@ -26,17 +26,17 @@ PUT /website/article/3
   "author_id": 11400
 }
 
-³¢ÊÔ¸÷ÖÖËÑË÷
+å°è¯•å„ç§æœç´¢
 
-GET /website/article/_search?q=2017			3Ìõ½á¹û             
-GET /website/article/_search?q=2017-01-01        	3Ìõ½á¹û
-GET /website/article/_search?q=post_date:2017-01-01   	1Ìõ½á¹û
-GET /website/article/_search?q=post_date:2017         	1Ìõ½á¹û
+GET /website/article/_search?q=2017			3æ¡ç»“æœ             
+GET /website/article/_search?q=2017-01-01        	3æ¡ç»“æœ
+GET /website/article/_search?q=post_date:2017-01-01   	1æ¡ç»“æœ
+GET /website/article/_search?q=post_date:2017         	1æ¡ç»“æœ
 
-²é¿´es×Ô¶¯½¨Á¢µÄmapping£¬´ø³öÊ²Ã´ÊÇmappingµÄÖªÊ¶µã
-×Ô¶¯»òÊÖ¶¯ÎªindexÖĞµÄtype½¨Á¢µÄÒ»ÖÖÊı¾İ½á¹¹ºÍÏà¹ØÅäÖÃ£¬¼ò³ÆÎªmapping
-dynamic mapping£¬×Ô¶¯ÎªÎÒÃÇ½¨Á¢index£¬´´½¨type£¬ÒÔ¼°type¶ÔÓ¦µÄmapping£¬mappingÖĞ°üº¬ÁËÃ¿¸öfield¶ÔÓ¦µÄÊı¾İÀàĞÍ£¬ÒÔ¼°ÈçºÎ·Ö´ÊµÈÉèÖÃ
-ÎÒÃÇµ±È»£¬ºóÃæ»á½²½â£¬Ò²¿ÉÒÔÊÖ¶¯ÔÚ´´½¨Êı¾İÖ®Ç°£¬ÏÈ´´½¨indexºÍtype£¬ÒÔ¼°type¶ÔÓ¦µÄmapping
+æŸ¥çœ‹esè‡ªåŠ¨å»ºç«‹çš„mappingï¼Œå¸¦å‡ºä»€ä¹ˆæ˜¯mappingçš„çŸ¥è¯†ç‚¹
+è‡ªåŠ¨æˆ–æ‰‹åŠ¨ä¸ºindexä¸­çš„typeå»ºç«‹çš„ä¸€ç§æ•°æ®ç»“æ„å’Œç›¸å…³é…ç½®ï¼Œç®€ç§°ä¸ºmapping
+dynamic mappingï¼Œè‡ªåŠ¨ä¸ºæˆ‘ä»¬å»ºç«‹indexï¼Œåˆ›å»ºtypeï¼Œä»¥åŠtypeå¯¹åº”çš„mappingï¼Œmappingä¸­åŒ…å«äº†æ¯ä¸ªfieldå¯¹åº”çš„æ•°æ®ç±»å‹ï¼Œä»¥åŠå¦‚ä½•åˆ†è¯ç­‰è®¾ç½®
+æˆ‘ä»¬å½“ç„¶ï¼Œåé¢ä¼šè®²è§£ï¼Œä¹Ÿå¯ä»¥æ‰‹åŠ¨åœ¨åˆ›å»ºæ•°æ®ä¹‹å‰ï¼Œå…ˆåˆ›å»ºindexå’Œtypeï¼Œä»¥åŠtypeå¯¹åº”çš„mapping
 
 GET /website/_mapping/article
 
@@ -75,4 +75,4 @@ GET /website/_mapping/article
   }
 }
 
-ËÑË÷½á¹ûÎªÊ²Ã´²»Ò»ÖÂ£¬ÒòÎªes×Ô¶¯½¨Á¢mappingµÄÊ±ºò£¬ÉèÖÃÁË²»Í¬µÄfield²»Í¬µÄdata type¡£²»Í¬µÄdata typeµÄ·Ö´Ê¡¢ËÑË÷µÈĞĞÎªÊÇ²»Ò»ÑùµÄ¡£ËùÒÔ³öÏÖÁË_all fieldºÍpost_date fieldµÄËÑË÷±íÏÖÍêÈ«²»Ò»Ñù¡£
+æœç´¢ç»“æœä¸ºä»€ä¹ˆä¸ä¸€è‡´ï¼Œå› ä¸ºesè‡ªåŠ¨å»ºç«‹mappingçš„æ—¶å€™ï¼Œè®¾ç½®äº†ä¸åŒçš„fieldä¸åŒçš„data typeã€‚ä¸åŒçš„data typeçš„åˆ†è¯ã€æœç´¢ç­‰è¡Œä¸ºæ˜¯ä¸ä¸€æ ·çš„ã€‚æ‰€ä»¥å‡ºç°äº†_all fieldå’Œpost_date fieldçš„æœç´¢è¡¨ç°å®Œå…¨ä¸ä¸€æ ·ã€‚

@@ -1,4 +1,4 @@
-课程大纲
+璇剧▼澶х翰
 
 GET /tvs/sales/_search 
 {
@@ -79,7 +79,7 @@ GET /tvs/sales/_search
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "小米",
+                "key": "灏忕背",
                 "doc_count": 1,
                 "sum_price": {
                   "value": 3000
@@ -121,7 +121,7 @@ GET /tvs/sales/_search
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "长虹",
+                "key": "闀胯櫣",
                 "doc_count": 3,
                 "sum_price": {
                   "value": 5000
@@ -142,14 +142,14 @@ GET /tvs/sales/_search
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "三星",
+                "key": "涓夋槦",
                 "doc_count": 1,
                 "sum_price": {
                   "value": 8000
                 }
               },
               {
-                "key": "小米",
+                "key": "灏忕背",
                 "doc_count": 1,
                 "sum_price": {
                   "value": 2500

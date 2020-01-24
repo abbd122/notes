@@ -1,10 +1,10 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-cross-fieldsËÑË÷£¬Ò»¸öÎ¨Ò»±êÊ¶£¬¿çÁË¶à¸öfield¡£±ÈÈçÒ»¸öÈË£¬±êÊ¶£¬ÊÇÐÕÃû£»Ò»¸ö½¨Öþ£¬ËüµÄ±êÊ¶ÊÇµØÖ·¡£ÐÕÃû¿ÉÒÔÉ¢ÂäÔÚ¶à¸öfieldÖÐ£¬±ÈÈçfirst_nameºÍlast_nameÖÐ£¬µØÖ·¿ÉÒÔÉ¢ÂäÔÚcountry£¬province£¬cityÖÐ¡£
+cross-fieldsæœç´¢ï¼Œä¸€ä¸ªå”¯ä¸€æ ‡è¯†ï¼Œè·¨äº†å¤šä¸ªfieldã€‚æ¯”å¦‚ä¸€ä¸ªäººï¼Œæ ‡è¯†ï¼Œæ˜¯å§“åï¼›ä¸€ä¸ªå»ºç­‘ï¼Œå®ƒçš„æ ‡è¯†æ˜¯åœ°å€ã€‚å§“åå¯ä»¥æ•£è½åœ¨å¤šä¸ªfieldä¸­ï¼Œæ¯”å¦‚first_nameå’Œlast_nameä¸­ï¼Œåœ°å€å¯ä»¥æ•£è½åœ¨countryï¼Œprovinceï¼Œcityä¸­ã€‚
 
-¿ç¶à¸öfieldËÑË÷Ò»¸ö±êÊ¶£¬±ÈÈçËÑË÷Ò»¸öÈËÃû£¬»òÕßÒ»¸öµØÖ·£¬¾ÍÊÇcross-fieldsËÑË÷
+è·¨å¤šä¸ªfieldæœç´¢ä¸€ä¸ªæ ‡è¯†ï¼Œæ¯”å¦‚æœç´¢ä¸€ä¸ªäººåï¼Œæˆ–è€…ä¸€ä¸ªåœ°å€ï¼Œå°±æ˜¯cross-fieldsæœç´¢
 
-³õ²½À´Ëµ£¬Èç¹ûÒªÊµÏÖ£¬¿ÉÄÜÓÃmost_fields±È½ÏºÏÊÊ¡£ÒòÎªbest_fieldsÊÇÓÅÏÈËÑË÷µ¥¸öfield×îÆ¥ÅäµÄ½á¹û£¬cross-fields±¾Éí¾Í²»ÊÇÒ»¸öfieldµÄÎÊÌâÁË¡£
+åˆæ­¥æ¥è¯´ï¼Œå¦‚æžœè¦å®žçŽ°ï¼Œå¯èƒ½ç”¨most_fieldsæ¯”è¾ƒåˆé€‚ã€‚å› ä¸ºbest_fieldsæ˜¯ä¼˜å…ˆæœç´¢å•ä¸ªfieldæœ€åŒ¹é…çš„ç»“æžœï¼Œcross-fieldsæœ¬èº«å°±ä¸æ˜¯ä¸€ä¸ªfieldçš„é—®é¢˜äº†ã€‚
 
 POST /forum/article/_bulk
 { "update": { "_id": "1"} }
@@ -29,11 +29,11 @@ GET /forum/article/_search
   }
 }
 
-Peter Smith£¬Æ¥Åäauthor_first_name£¬Æ¥Åäµ½ÁËSmith£¬ÕâÊ±ºòËüµÄ·ÖÊýºÜ¸ß£¬ÎªÊ²Ã´°¡£¿£¿£¿
-ÒòÎªIDF·ÖÊý¸ß£¬IDF·ÖÊýÒª¸ß£¬ÄÇÃ´Õâ¸öÆ¥Åäµ½µÄterm£¨Smith£©£¬ÔÚËùÓÐdocÖÐµÄ³öÏÖÆµÂÊÒªµÍ£¬author_first_name fieldÖÐ£¬Smith¾Í³öÏÖ¹ý1´Î
-Peter SmithÕâ¸öÈË£¬doc 1£¬SmithÔÚauthor_last_nameÖÐ£¬µ«ÊÇauthor_last_name³öÏÖÁËÁ½´ÎSmith£¬ËùÒÔµ¼ÖÂdoc 1µÄIDF·ÖÊý½ÏµÍ
+Peter Smithï¼ŒåŒ¹é…author_first_nameï¼ŒåŒ¹é…åˆ°äº†Smithï¼Œè¿™æ—¶å€™å®ƒçš„åˆ†æ•°å¾ˆé«˜ï¼Œä¸ºä»€ä¹ˆå•Šï¼Ÿï¼Ÿï¼Ÿ
+å› ä¸ºIDFåˆ†æ•°é«˜ï¼ŒIDFåˆ†æ•°è¦é«˜ï¼Œé‚£ä¹ˆè¿™ä¸ªåŒ¹é…åˆ°çš„termï¼ˆSmithï¼‰ï¼Œåœ¨æ‰€æœ‰docä¸­çš„å‡ºçŽ°é¢‘çŽ‡è¦ä½Žï¼Œauthor_first_name fieldä¸­ï¼ŒSmithå°±å‡ºçŽ°è¿‡1æ¬¡
+Peter Smithè¿™ä¸ªäººï¼Œdoc 1ï¼ŒSmithåœ¨author_last_nameä¸­ï¼Œä½†æ˜¯author_last_nameå‡ºçŽ°äº†ä¸¤æ¬¡Smithï¼Œæ‰€ä»¥å¯¼è‡´doc 1çš„IDFåˆ†æ•°è¾ƒä½Ž
 
-²»ÒªÓÐ¹ý¶àµÄÒÉÎÊ£¬Ò»¶¨ÊÇÕâÑùÂð£¿
+ä¸è¦æœ‰è¿‡å¤šçš„ç–‘é—®ï¼Œä¸€å®šæ˜¯è¿™æ ·å—ï¼Ÿ
 
 
 
@@ -120,11 +120,11 @@ Peter SmithÕâ¸öÈË£¬doc 1£¬SmithÔÚauthor_last_nameÖÐ£¬µ«ÊÇauthor_last_name³öÏÖÁËÁ
   }
 }
 
-ÎÊÌâ1£ºÖ»ÊÇÕÒµ½¾¡¿ÉÄÜ¶àµÄfieldÆ¥ÅäµÄdoc£¬¶ø²»ÊÇÄ³¸öfieldÍêÈ«Æ¥ÅäµÄdoc
+é—®é¢˜1ï¼šåªæ˜¯æ‰¾åˆ°å°½å¯èƒ½å¤šçš„fieldåŒ¹é…çš„docï¼Œè€Œä¸æ˜¯æŸä¸ªfieldå®Œå…¨åŒ¹é…çš„doc
 
-ÎÊÌâ2£ºmost_fields£¬Ã»°ì·¨ÓÃminimum_should_matchÈ¥µô³¤Î²Êý¾Ý£¬¾ÍÊÇÆ¥ÅäµÄÌØ±ðÉÙµÄ½á¹û
+é—®é¢˜2ï¼šmost_fieldsï¼Œæ²¡åŠžæ³•ç”¨minimum_should_matchåŽ»æŽ‰é•¿å°¾æ•°æ®ï¼Œå°±æ˜¯åŒ¹é…çš„ç‰¹åˆ«å°‘çš„ç»“æžœ
 
-ÎÊÌâ3£ºTF/IDFËã·¨£¬±ÈÈçPeter SmithºÍSmith Williams£¬ËÑË÷Peter SmithµÄÊ±ºò£¬ÓÉÓÚfirst_nameÖÐºÜÉÙÓÐSmithµÄ£¬ËùÒÔqueryÔÚËùÓÐdocumentÖÐµÄÆµÂÊºÜµÍ£¬µÃµ½µÄ·ÖÊýºÜ¸ß£¬¿ÉÄÜSmith Williams·´¶ø»áÅÅÔÚPeter SmithÇ°Ãæ
+é—®é¢˜3ï¼šTF/IDFç®—æ³•ï¼Œæ¯”å¦‚Peter Smithå’ŒSmith Williamsï¼Œæœç´¢Peter Smithçš„æ—¶å€™ï¼Œç”±äºŽfirst_nameä¸­å¾ˆå°‘æœ‰Smithçš„ï¼Œæ‰€ä»¥queryåœ¨æ‰€æœ‰documentä¸­çš„é¢‘çŽ‡å¾ˆä½Žï¼Œå¾—åˆ°çš„åˆ†æ•°å¾ˆé«˜ï¼Œå¯èƒ½Smith Williamsåè€Œä¼šæŽ’åœ¨Peter Smithå‰é¢
 
 
 

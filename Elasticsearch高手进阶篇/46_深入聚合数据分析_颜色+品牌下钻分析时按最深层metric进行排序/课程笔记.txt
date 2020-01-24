@@ -1,4 +1,4 @@
-课程大纲
+璇剧▼澶х翰
 
 GET /tvs/sales/_search 
 {
@@ -48,21 +48,21 @@ GET /tvs/sales/_search
       "sum_other_doc_count": 0,
       "buckets": [
         {
-          "key": "红色",
+          "key": "绾㈣壊",
           "doc_count": 4,
           "group_by_brand": {
             "doc_count_error_upper_bound": 0,
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "三星",
+                "key": "涓夋槦",
                 "doc_count": 1,
                 "avg_price": {
                   "value": 8000
                 }
               },
               {
-                "key": "长虹",
+                "key": "闀胯櫣",
                 "doc_count": 3,
                 "avg_price": {
                   "value": 1666.6666666666667
@@ -72,14 +72,14 @@ GET /tvs/sales/_search
           }
         },
         {
-          "key": "绿色",
+          "key": "缁胯壊",
           "doc_count": 2,
           "group_by_brand": {
             "doc_count_error_upper_bound": 0,
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "小米",
+                "key": "灏忕背",
                 "doc_count": 1,
                 "avg_price": {
                   "value": 3000
@@ -96,14 +96,14 @@ GET /tvs/sales/_search
           }
         },
         {
-          "key": "蓝色",
+          "key": "钃濊壊",
           "doc_count": 2,
           "group_by_brand": {
             "doc_count_error_upper_bound": 0,
             "sum_other_doc_count": 0,
             "buckets": [
               {
-                "key": "小米",
+                "key": "灏忕背",
                 "doc_count": 1,
                 "avg_price": {
                   "value": 2500

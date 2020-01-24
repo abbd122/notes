@@ -1,7 +1,7 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-£¨1£©partial updateÄÚÖÃÀÖ¹ÛËø²¢·¢¿ØÖÆ
-£¨2£©retry_on_conflict
-£¨3£©_version
+ï¼ˆ1ï¼‰partial updateå†…ç½®ä¹è§‚é”å¹¶å‘æ§åˆ¶
+ï¼ˆ2ï¼‰retry_on_conflict
+ï¼ˆ3ï¼‰_version
 
 post /index/type/id/_update?retry_on_conflict=5&version=6

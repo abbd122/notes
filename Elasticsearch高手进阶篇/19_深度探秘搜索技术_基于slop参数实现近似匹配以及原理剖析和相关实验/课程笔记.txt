@@ -10,17 +10,17 @@ GET /forum/article/_search
     }
 }
 
-slopµÄº¬ÒåÊÇÊ²Ã´£¿
+slopçš„å«ä¹‰æ˜¯ä»€ä¹ˆï¼Ÿ
 
-query string£¬ËÑË÷ÎÄ±¾£¬ÖĞµÄ¼¸¸öterm£¬Òª¾­¹ı¼¸´ÎÒÆ¶¯²ÅÄÜÓëÒ»¸ödocumentÆ¥Åä£¬Õâ¸öÒÆ¶¯µÄ´ÎÊı£¬¾ÍÊÇslop
+query stringï¼Œæœç´¢æ–‡æœ¬ï¼Œä¸­çš„å‡ ä¸ªtermï¼Œè¦ç»è¿‡å‡ æ¬¡ç§»åŠ¨æ‰èƒ½ä¸ä¸€ä¸ªdocumentåŒ¹é…ï¼Œè¿™ä¸ªç§»åŠ¨çš„æ¬¡æ•°ï¼Œå°±æ˜¯slop
 
-Êµ¼Ê¾ÙÀı£¬Ò»¸öquery string¾­¹ı¼¸´ÎÒÆ¶¯Ö®ºó¿ÉÒÔÆ¥Åäµ½Ò»¸ödocument£¬È»ºóÉèÖÃslop
+å®é™…ä¸¾ä¾‹ï¼Œä¸€ä¸ªquery stringç»è¿‡å‡ æ¬¡ç§»åŠ¨ä¹‹åå¯ä»¥åŒ¹é…åˆ°ä¸€ä¸ªdocumentï¼Œç„¶åè®¾ç½®slop
 
 hello world, java is very good, spark is also very good.
 
-java spark£¬match phrase£¬ËÑ²»µ½
+java sparkï¼Œmatch phraseï¼Œæœä¸åˆ°
 
-Èç¹ûÎÒÃÇÖ¸¶¨ÁËslop£¬ÄÇÃ´¾ÍÔÊĞíjava spark½øĞĞÒÆ¶¯£¬À´³¢ÊÔÓëdoc½øĞĞÆ¥Åä
+å¦‚æœæˆ‘ä»¬æŒ‡å®šäº†slopï¼Œé‚£ä¹ˆå°±å…è®¸java sparkè¿›è¡Œç§»åŠ¨ï¼Œæ¥å°è¯•ä¸docè¿›è¡ŒåŒ¹é…
 
 java		is		very		good		spark		is
 
@@ -29,11 +29,11 @@ java		-->		spark
 java				-->			spark
 java							-->			spark
 
-ÕâÀïµÄslop£¬¾ÍÊÇ3£¬ÒòÎªjava sparkÕâ¸ö¶ÌÓï£¬sparkÒÆ¶¯ÁË3´Î£¬¾Í¿ÉÒÔ¸úÒ»¸ödocÆ¥ÅäÉÏÁË
+è¿™é‡Œçš„slopï¼Œå°±æ˜¯3ï¼Œå› ä¸ºjava sparkè¿™ä¸ªçŸ­è¯­ï¼Œsparkç§»åŠ¨äº†3æ¬¡ï¼Œå°±å¯ä»¥è·Ÿä¸€ä¸ªdocåŒ¹é…ä¸Šäº†
 
-slopµÄº¬Òå£¬²»½ö½öÊÇËµÒ»¸öquery string termsÒÆ¶¯¼¸´Î£¬¸úÒ»¸ödocÆ¥ÅäÉÏ¡£Ò»¸öquery string terms£¬×î¶à¿ÉÒÔÒÆ¶¯¼¸´ÎÈ¥³¢ÊÔ¸úÒ»¸ödocÆ¥ÅäÉÏ
+slopçš„å«ä¹‰ï¼Œä¸ä»…ä»…æ˜¯è¯´ä¸€ä¸ªquery string termsç§»åŠ¨å‡ æ¬¡ï¼Œè·Ÿä¸€ä¸ªdocåŒ¹é…ä¸Šã€‚ä¸€ä¸ªquery string termsï¼Œæœ€å¤šå¯ä»¥ç§»åŠ¨å‡ æ¬¡å»å°è¯•è·Ÿä¸€ä¸ªdocåŒ¹é…ä¸Š
 
-slop£¬ÉèÖÃµÄÊÇ3£¬ÄÇÃ´¾Íok
+slopï¼Œè®¾ç½®çš„æ˜¯3ï¼Œé‚£ä¹ˆå°±ok
 
 GET /forum/article/_search
 {
@@ -47,11 +47,11 @@ GET /forum/article/_search
     }
 }
 
-¾Í¿ÉÒÔ°Ñ¸Õ²ÅÄÇ¸ödocÆ¥ÅäÉÏ£¬ÄÇ¸ödoc»á×÷Îª½á¹û·µ»Ø
+å°±å¯ä»¥æŠŠåˆšæ‰é‚£ä¸ªdocåŒ¹é…ä¸Šï¼Œé‚£ä¸ªdocä¼šä½œä¸ºç»“æœè¿”å›
 
-µ«ÊÇÈç¹ûslopÉèÖÃµÄÊÇ2£¬ÄÇÃ´java spark£¬spark×î¶àÖ»ÄÜÒÆ¶¯2´Î£¬´ËÊ±¸údocÊÇÆ¥Åä²»ÉÏµÄ£¬ÄÇ¸ödocÊÇ²»»á×÷Îª½á¹û·µ»ØµÄ
+ä½†æ˜¯å¦‚æœslopè®¾ç½®çš„æ˜¯2ï¼Œé‚£ä¹ˆjava sparkï¼Œsparkæœ€å¤šåªèƒ½ç§»åŠ¨2æ¬¡ï¼Œæ­¤æ—¶è·Ÿdocæ˜¯åŒ¹é…ä¸ä¸Šçš„ï¼Œé‚£ä¸ªdocæ˜¯ä¸ä¼šä½œä¸ºç»“æœè¿”å›çš„
 
-×öÊµÑé£¬ÑéÖ¤slopµÄº¬Òå
+åšå®éªŒï¼ŒéªŒè¯slopçš„å«ä¹‰
 
 GET /forum/article/_search
 {
@@ -93,7 +93,7 @@ spark		-->				data
 spark						-->			data
 spark									-->			data
 
-slopËÑË÷ÏÂ£¬¹Ø¼ü´ÊÀëµÄÔ½½ü£¬relevance score¾Í»áÔ½¸ß£¬×öÊµÑéËµÃ÷¡£¡£¡£
+slopæœç´¢ä¸‹ï¼Œå…³é”®è¯ç¦»çš„è¶Šè¿‘ï¼Œrelevance scoreå°±ä¼šè¶Šé«˜ï¼Œåšå®éªŒè¯´æ˜ã€‚ã€‚ã€‚
 
 {
   "took": 4,
@@ -260,7 +260,7 @@ GET /forum/article/_search
   }
 }
 
-ÆäÊµ£¬¼ÓÁËslopµÄphrase match£¬¾ÍÊÇproximity match£¬½üËÆÆ¥Åä
+å…¶å®ï¼ŒåŠ äº†slopçš„phrase matchï¼Œå°±æ˜¯proximity matchï¼Œè¿‘ä¼¼åŒ¹é…
 
-1¡¢java spark£¬¶ÌÓï£¬doc£¬phrase match
-2¡¢java spark£¬¿ÉÒÔÓĞÒ»¶¨µÄ¾àÀë£¬µ«ÊÇ¿¿µÄÔ½½ü£¬Ô½ÏÈËÑË÷³öÀ´£¬proximity match
+1ã€java sparkï¼ŒçŸ­è¯­ï¼Œdocï¼Œphrase match
+2ã€java sparkï¼Œå¯ä»¥æœ‰ä¸€å®šçš„è·ç¦»ï¼Œä½†æ˜¯é çš„è¶Šè¿‘ï¼Œè¶Šå…ˆæœç´¢å‡ºæ¥ï¼Œproximity match

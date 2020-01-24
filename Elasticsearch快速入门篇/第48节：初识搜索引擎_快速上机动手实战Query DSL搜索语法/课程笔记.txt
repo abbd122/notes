@@ -1,6 +1,6 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Ò»¸öÀı×ÓÈÃÄãÃ÷°×Ê²Ã´ÊÇQuery DSL
+1ã€ä¸€ä¸ªä¾‹å­è®©ä½ æ˜ç™½ä»€ä¹ˆæ˜¯Query DSL
 
 GET /_search
 {
@@ -9,7 +9,7 @@ GET /_search
     }
 }
 
-2¡¢Query DSLµÄ»ù±¾Óï·¨
+2ã€Query DSLçš„åŸºæœ¬è¯­æ³•
 
 {
     QUERY_NAME: {
@@ -27,7 +27,7 @@ GET /_search
     }
 }
 
-Ê¾Àı£º
+ç¤ºä¾‹ï¼š
 
 GET /test_index/test_type/_search 
 {
@@ -38,9 +38,9 @@ GET /test_index/test_type/_search
   }
 }
 
-3¡¢ÈçºÎ×éºÏ¶à¸öËÑË÷Ìõ¼ş
+3ã€å¦‚ä½•ç»„åˆå¤šä¸ªæœç´¢æ¡ä»¶
 
-ËÑË÷ĞèÇó£ºtitle±ØĞë°üº¬elasticsearch£¬content¿ÉÒÔ°üº¬elasticsearchÒ²¿ÉÒÔ²»°üº¬£¬author_id±ØĞë²»Îª111
+æœç´¢éœ€æ±‚ï¼štitleå¿…é¡»åŒ…å«elasticsearchï¼Œcontentå¯ä»¥åŒ…å«elasticsearchä¹Ÿå¯ä»¥ä¸åŒ…å«ï¼Œauthor_idå¿…é¡»ä¸ä¸º111
 
 {
   "took": 1,

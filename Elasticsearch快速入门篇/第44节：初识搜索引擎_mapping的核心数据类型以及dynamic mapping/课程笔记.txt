@@ -1,14 +1,14 @@
-课程大纲
+璇剧▼澶х翰
 
-1、核心的数据类型
+1銆佹牳蹇冪殑鏁版嵁绫诲瀷
 
 string
-byte，short，integer，long
-float，double
+byte锛宻hort锛宨nteger锛宭ong
+float锛宒ouble
 boolean
 date
 
-2、dynamic mapping
+2銆乨ynamic mapping
 
 true or false	-->	boolean
 123		-->	long
@@ -16,6 +16,6 @@ true or false	-->	boolean
 2017-01-01	-->	date
 "hello world"	-->	string/text
 
-3、查看mapping
+3銆佹煡鐪媘apping
 
 GET /index/_mapping/type

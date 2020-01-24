@@ -1,8 +1,8 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
-1¡¢Í¼½âElasticsearchÈİ´í»úÖÆ£ºmasterÑ¡¾Ù£¬replicaÈİ´í£¬Êı¾İ»Ö¸´
+1ã€å›¾è§£Elasticsearchå®¹é”™æœºåˆ¶ï¼šmasteré€‰ä¸¾ï¼Œreplicaå®¹é”™ï¼Œæ•°æ®æ¢å¤
 
-£¨1£©9 shard£¬3 node
-£¨2£©master nodeå´»ú£¬×Ô¶¯masterÑ¡¾Ù£¬red
-£¨3£©replicaÈİ´í£ºĞÂmaster½«replicaÌáÉıÎªprimary shard£¬yellow
-£¨4£©ÖØÆôå´»únode£¬master copy replicaµ½¸Ãnode£¬Ê¹ÓÃÔ­ÓĞµÄshard²¢Í¬²½å´»úºóµÄĞŞ¸Ä£¬green
+ï¼ˆ1ï¼‰9 shardï¼Œ3 node
+ï¼ˆ2ï¼‰master nodeå®•æœºï¼Œè‡ªåŠ¨masteré€‰ä¸¾ï¼Œred
+ï¼ˆ3ï¼‰replicaå®¹é”™ï¼šæ–°masterå°†replicaæå‡ä¸ºprimary shardï¼Œyellow
+ï¼ˆ4ï¼‰é‡å¯å®•æœºnodeï¼Œmaster copy replicaåˆ°è¯¥nodeï¼Œä½¿ç”¨åŸæœ‰çš„shardå¹¶åŒæ­¥å®•æœºåçš„ä¿®æ”¹ï¼Œgreen

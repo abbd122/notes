@@ -1,13 +1,13 @@
-¿Î³Ì´ó¸Ù
+è¯¾ç¨‹å¤§çº²
 
 term: {"field": "value"}
 terms: {"field": ["value1", "value2"]}
 
-sqlÖĞµÄin
+sqlä¸­çš„in
 
 select * from tbl where col in ("value1", "value2")
 
-1¡¢ÎªÌû×ÓÊı¾İÔö¼Ótag×Ö¶Î
+1ã€ä¸ºå¸–å­æ•°æ®å¢åŠ tagå­—æ®µ
 
 POST /forum/article/_bulk
 { "update": { "_id": "1"} }
@@ -19,7 +19,7 @@ POST /forum/article/_bulk
 { "update": { "_id": "4"} }
 { "doc" : {"tag" : ["java", "elasticsearch"]} }
 
-2¡¢ËÑË÷articleIDÎªKDKE-B-9947-#kL5»òQQPX-R-3956-#aD8µÄÌû×Ó£¬ËÑË÷tagÖĞ°üº¬javaµÄÌû×Ó
+2ã€æœç´¢articleIDä¸ºKDKE-B-9947-#kL5æˆ–QQPX-R-3956-#aD8çš„å¸–å­ï¼Œæœç´¢tagä¸­åŒ…å«javaçš„å¸–å­
 
 GET /forum/article/_search 
 {
@@ -113,7 +113,7 @@ GET /forum/article/_search
   }
 }
 
-3¡¢ÓÅ»¯ËÑË÷½á¹û£¬½ö½öËÑË÷tagÖ»°üº¬javaµÄÌû×Ó
+3ã€ä¼˜åŒ–æœç´¢ç»“æœï¼Œä»…ä»…æœç´¢tagåªåŒ…å«javaçš„å¸–å­
 
 POST /forum/article/_bulk
 { "update": { "_id": "1"} }
@@ -151,11 +151,11 @@ GET /forum/article/_search
 
 ["java", "hadoop", "elasticsearch"]
 
-4¡¢Ñ§µ½µÄÖªÊ¶µãÊáÀí
+4ã€å­¦åˆ°çš„çŸ¥è¯†ç‚¹æ¢³ç†
 
-£¨1£©terms¶àÖµËÑË÷
-£¨2£©ÓÅ»¯terms¶àÖµËÑË÷µÄ½á¹û
-£¨3£©Ïàµ±ÓÚSQLÖĞµÄinÓï¾ä
+ï¼ˆ1ï¼‰termså¤šå€¼æœç´¢
+ï¼ˆ2ï¼‰ä¼˜åŒ–termså¤šå€¼æœç´¢çš„ç»“æœ
+ï¼ˆ3ï¼‰ç›¸å½“äºSQLä¸­çš„inè¯­å¥
 
 
 
