@@ -766,9 +766,304 @@ print(a)  # 报错
 > - 在并发高的情况下，连接活跃度不是很高，`epoll`比`select`好
 > - 并发性不高，同时连接很活跃(例如游戏连接，连接后不会断掉)，`select`比`epoll`好
 
-## `select`+回调+事件循环
 
-### `DefaultSelector`
 
-`from selector import DefaultSelector`
+## 协程
+
+### 生成器 `send`, `close`, `throw`
+
+- `send`: 传递值到生成器
+
+```python
+def gen_func():
+    # 1.可以产出值
+    # 2. 可以接收值(调用方传进来的值)
+    html = yield 'http://projectsedu.com'
+    print(html)
+    yield 2
+    yield 3
+    return 'bobby'
+
+
+if __name__ == '__main__':
+    gen = gen_func()
+    '''
+    用send发送非None值之前，必须启动一次生成器,
+    方式有两种:
+    1.gen.send(None)
+    2.next(gen)
+    '''
+    url = next(gen)
+    html = 'bobby'
+    gen.send(html)
+```
+
+- `close`: 关闭生成器
+
+```python
+def gen_func():
+    try:
+        yield 'http://projectsedu.com'
+    except GeneratorExit:  # GeneratorExit是继承自BaseException
+        pass
+    yield 2
+    yield 3
+    return 'bobby'
+
+
+if __name__ == '__main__':
+    gen = gen_func()
+    print(next(gen))
+    gen.close()
+    # close后生成器不会再向下执行
+    next(gen)
+```
+
+- `throw`: 生成器抛出异常
+
+```python
+def gen_func():
+    try:
+        yield 'http://projectsedu.com'
+    except Exception as e:
+        pass
+    yield 2
+    yield 3
+    return 'bobby'
+
+
+if __name__ == '__main__':
+    gen = gen_func()
+    print(next(gen))
+    gen.throw(Exception, 'download error')
+    print(next(gen))
+    gen.throw(Exception, 'download error')
+```
+
+### `yield from`
+
+#### `itertools.chain`
+
+> 将多个可迭代对象组合到一个for循环中
+
+```python
+from itertools import chain
+
+my_list = [1,2,3]
+my_dict = {
+    'bobby1': 'http://projectsedu.com',
+    'bobby2': 'http://www.imooc.com'
+}
+for value in chain(my_list, my_dict, range(5, 10)):
+    print(value)
+```
+
+- 自定义`chain`
+
+```python
+def my_chain(*args, **kwargs):
+    for my_iterable in args:
+        for value in my_iterable:
+            yield value
+```
+
+- `yield from`简化自定义
+
+```python
+def my_chain(*args, **kwargs):
+    for my_iterable in args:
+        yield from my_iterable
+        # for value in my_iterable:
+        #     yield value
+```
+
+### `yield from`和`yield`区别
+
+####  `yield from`会将可迭代对象中的每个值获取出来
+
+```python
+def gen1(iterable):
+    yield iterable
+
+
+def gen2(iterable):
+    yield from iterable
+
+
+for value in gen1(range(10)):
+    print(value)  # 结果: range(0, 10)
+
+for value in gen2(range(10)):
+    print(value)  # 结果: 0, 1, 2, ...
+
+```
+
+#### `yield from`会在调用方和子生成器之间建立一个双向通道
+
+```python
+def g1(gen):
+    """
+    g1: 委托生成器
+    gen: 子生成器
+    """
+    yield from gen
+
+
+def main():
+    """
+    main: 调用方
+    """
+    g = g1(range(10))
+    g.send(None)
+```
+
+案例
+
+```python
+final_result = {}
+
+
+def sales_sum(pro_name):
+    total = 0
+    nums = []
+    while True:
+        x = yield  # m.send(value)发送给此处的x
+        print(pro_name + '销量: ', x)
+        if not x:
+            break
+        total += x
+        nums.append(x)
+    return total, nums
+
+
+def middle(key):
+    while True:
+        final_result[key] = yield from sales_sum(key)
+        print(key + '销量统计完成!!.')
+
+
+def main():
+    data_sets = {
+        'bobby牌面膜': [1200, 1500, 3000],
+        'bobby牌手机': [28, 55, 98, 108],
+        'bobby牌大衣': [280, 560, 778, 70]
+    }
+    for key, data_set in data_sets.items():
+        print('start key:', key)
+        m = middle(key)
+        m.send(None)
+        for value in data_set:
+            m.send(value)
+        m.send(None)
+    print('final_result', final_result)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+#### `yield from`会自动捕获`StopIteration`异常
+
+```python
+def sales_sum(pro_name):
+    total = 0
+    nums = []
+    while True:
+        x = yield
+        print(pro_name + '销量: ', x)
+        if not x:
+            break
+        total += x
+        nums.append(x)
+    return total, nums
+
+
+if __name__ == '__main__':
+    # 还原yield from逻辑如下:
+    my_gen = sales_sum('bobby牌手机')
+    my_gen.send(None)
+    my_gen.send(1200)
+    my_gen.send(1500)
+    my_gen.send(3000)
+    try:
+        my_gen.send(None)
+    except StopIteration as e:
+        result = e.value
+        print(result)
+```
+
+### `async`和`await`
+
+```python
+async def downloader(url):
+    return 'bobby'
+
+
+async def download_url(url):
+    html = await downloader(url)
+
+    return html
+
+
+if __name__ == '__main__':
+    coro = download_url('http://www.imooc.com')
+    coro.send(None)
+```
+
+
+
+# `asyncio`异步`io`并发编程
+
+### 使用`asyncio`
+
+![](/home/wangzheng/文档/notes/image/使用asyncio.png)
+
+### `asyncio`, 10次并发
+
+![](/home/wangzheng/文档/notes/image/使用asyncio(10次).png)
+
+### 获取值
+
+> `asyncio.ensure_future`或者`loop.create_task`
+
+![](/home/wangzheng/文档/notes/image/asyncio获取值.png)
+
+### 回调
+
+> `add_done_callback`
+
+![](/home/wangzheng/文档/notes/image/回调.png)
+
+回调函数传递参数
+
+> `functools.partial`
+
+![](/home/wangzheng/文档/notes/image/回调函数传参.png)
+
+### `wait`和`gather`
+
+> `gather`更加高级，功能更多，优先考虑`gather`
+
+![](/home/wangzheng/文档/notes/image/gather.png)
+
+### `run_until_complete`和`run_forever`
+
+> 1. `loop.run_until_complete()`: 运行到某一时刻结束
+> 2. `loop.run_forever()`一直运行
+
+### 取消`future(task)`
+
+1. 创建测试任务
+
+![](/home/wangzheng/文档/notes/image/取消task-1.png)
+
+2. `asyncio.Task.all_tasks()`获取所有任务，然后`task.cancle()`取消任务
+
+> `loop.stop()`后需要`loop.run_forever()`操作，否则会报错
+
+![](/home/wangzheng/文档/notes/image/取消task-2.png)
+
+### 嵌套携程
+
+`13-4`
 
