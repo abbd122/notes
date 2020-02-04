@@ -1063,7 +1063,168 @@ if __name__ == '__main__':
 
 ![](/home/wangzheng/文档/notes/image/取消task-2.png)
 
-### 嵌套携程
+### `call_xx`
 
-`13-4`
+> 这类方法比较底层，一般不会被用到
+
+#### `call_soon`
+
+> 放入时间循环中，立即执行
+
+![](/home/wangzheng/文档/notes/image/call_soon.png)
+
+#### `call_later`
+
+> 在一定时间后运行
+>
+> 三个call_later()是同时开始的
+>
+> call_soon()会在所有call_later()之前开始
+
+![](/home/wangzheng/文档/notes/image/call_later.png)
+
+#### `call_at`
+
+> 在一个指定时间点运行，`call_later`内部也是调用了`call_at`
+
+![](/home/wangzheng/文档/notes/image/call_at.png)
+
+#### `call_soon_threadsafe`
+
+> 线程安全
+
+### `ThreadPoolExecutor` + `asyncio`
+
+> `loop.run_in_executor`
+
+![](/home/wangzheng/文档/notes/image/asyncio+线程池.png)
+
+### `future`和`task`
+
+> `future`相当于一个结果容器，结果放入容器中后会去运行`callback`回调
+>
+> `task`是`future`的子类，用来解决协程启动(send(None))和监听`StopIteration`异常的功能
+
+### `asyncio`同步和通信
+
+#### `asyncio.Lock`
+
+![](/home/wangzheng/文档/notes/image/asyncio.Lock.png)
+
+#### `asyncio.Queue`
+
+> 使用`asyncio.Queue`的原因是`Queue`中有一个`maxsize`最大长度限制，所以如果不需要限制最大长度，就可以直接使用列表或元组作为容器(因为`asyncio`是单线程的，单线程下不需要对公共资源加锁)
+
+```python
+await queue.get()
+```
+
+### `aiohttp`
+
+```python
+import re
+
+import asyncio
+import aiohttp
+import aiomysql
+from pyquery import PyQuery
+
+stopping = False
+start_url = 'http://www.jobbole.com/'
+waitting_urls = []
+seen_urls = set()
+
+
+async def fetch(url, session):
+    try:
+        async with session.get(url) as response:
+            if response.status in [200, 201]:
+                data = await response.text()
+                return data
+    except Exception as e:
+        print(e)
+
+
+def extract_url(html):
+    urls = []
+    pq = PyQuery(html)
+    for link in pq.items('a'):
+        url = link.attr('href')
+        if url and url.startswith('http') and not url in seen_urls:
+            urls.append(url)
+            waitting_urls.append(url)
+    return urls
+
+
+async def init_urls(url, session):
+    html = await fetch(url, session)
+    seen_urls.add(url)
+    extract_url(html)
+
+
+async def article_handler(url, session, pool):
+    html = await fetch(url, session)
+    seen_urls.add(url)
+    extract_url(html)
+    pq = PyQuery(html)
+    title = pq('title').text()
+    async with pool.acquire() as conn:
+        async with conn.cursor as cur:
+            await cur.execute("SELECT 42;")
+            insert_sql = "insert into article_test(title) values('{}');".format(title)
+            await cur.execute(insert_sql)
+
+
+async def consumer(pool):
+    async with aiohttp.ClientSession() as session:
+        while not stopping:
+            if len(waitting_urls) == 0:
+                await asyncio.sleep(0.5)
+                continue
+            url = waitting_urls.pop()
+            print('start get url: {}'.format(url))
+
+            if re.match(r'http://.*?jobbole.com/\d+/', url):
+                if not url in seen_urls:
+                    asyncio.ensure_future(article_handler(url, session, pool))
+                    await asyncio.sleep(30)
+            # else:
+            #     if not url in seen_urls:
+            #         asyncio.ensure_future(init_urls(url, session))
+
+
+
+
+async def main(loop):
+    # 创建mysql连接池
+    pool = await aiomysql.create_pool(host='39.108.113.168', port=3306, user='wang', password='123', db='aiomysql_test', loop=loop,
+                                      charset='utf8', autocommit=True)
+    async with aiohttp.ClientSession() as session:
+        html = await fetch(start_url, session)
+        seen_urls.add(start_url)
+        extract_url(html)
+    asyncio.ensure_future(consumer(pool))
+
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    asyncio.ensure_future(main(loop))
+    loop.run_forever()
+```
+
+#### `asyncio.Semaphore`限制并发量
+
+```python
+sem = asyncio.Semaphore(3)  # 设置并发数为3
+async def fetch(url, session):
+    # 放入sem上下文中运行
+    async with sem:
+        try:
+            async with session.get(url) as response:
+                if response.status in [200, 201]:
+                    data = await response.text()
+                    return data
+        except Exception as e:
+            print(e)
+```
 
