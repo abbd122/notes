@@ -9,7 +9,7 @@ content = f.read()
 
 tree = etree.HTML(content.decode('utf-8'))
 
-print '--------------------------------------------'
+print('--------------------------------------------')
 print '# different quote //*[@class="p-price J-p-2131674"'
 print '--------------------------------------------'
 print tree.xpath(u"//*[@class='p-price J-p-2131674']")
