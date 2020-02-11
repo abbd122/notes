@@ -42,7 +42,7 @@ git push origin --delete branchname
 
 #### 合并分支
 
-```
+```shell
 1.切换到master
 git checkout master
 
@@ -57,5 +57,27 @@ git push
 
 ```shell
 git reset --hard + 版本号
+```
+
+### 本地初始化 --> 远程
+
+1. 初始化
+
+```shell
+git init .
+```
+
+2. 提交暂存区
+
+```shell
+git add .
+git commit -m 'xxx'
+```
+
+3. 提交至远程
+
+```shell
+git remote add origin git@github.com:abbd122/ArticleSpider.git
+git push -u origin master
 ```
 
